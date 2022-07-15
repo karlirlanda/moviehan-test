@@ -79,7 +79,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           APP_KEY: base64:ewNaZOhLg5sEm8bX4taP4YHqJIxMbfuoH5m9ud3Dz8U=
-          APP_KEY: base64:ewNaZOhLg5sEm8bX4taP4YHqJIxMbfuoH5m9ud3Dz8U=
           DB_CONNECTION: mysql
           DB_HOST: moviehandb.cvt0tk4kwbvo.ap-northeast-1.rds.amazonaws.com
           DB_PORT: 3306
