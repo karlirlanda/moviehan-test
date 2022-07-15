@@ -25,13 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Install composer
-        run: |
-          curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
-          composer update
-
       - name: Directory Permissions
         run: |
+          copy . /var/www
           chmod -R 777 ./
           
       - name: Configure AWS credentials
