@@ -29,6 +29,7 @@ jobs:
         run: |
           curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
           composer update
+          php artisan migrate
           
 
       - name: Directory Permissions
