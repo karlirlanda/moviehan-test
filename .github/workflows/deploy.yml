@@ -33,8 +33,9 @@ jobs:
           aws-region: ap-northeast-1
 
       - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-        run: php artisan key:generate
+        run: |
+          php -r "file_exists('.env') || copy('.env.example', '.env');"
+          php artisan key:generate
 
       - name: Install composer
         run: |
