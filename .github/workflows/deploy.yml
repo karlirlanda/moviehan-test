@@ -25,19 +25,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Configure AWS credentials
+      - name: Configure AWS credentials and Laravel .env
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
-
-      # - name: Install composer
-      #   run: |
-      #     curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
-      #     composer install
-
-      - name: ENV
         env: 
           APP_KEY: base64:ewNaZOhLg5sEm8bX4taP4YHqJIxMbfuoH5m9ud3Dz8U=
 
@@ -56,6 +49,11 @@ jobs:
           MAIL_ENCRYPTION: tls
           MAIL_FROM_ADDRESS: "laravel@example.com"
           MAIL_FROM_NAME: "${APP_NAME}"
+          
+      # - name: Install composer
+      #   run: |
+      #     curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+      #     composer install        
           
       - name: Directory Permissions
         run: |
