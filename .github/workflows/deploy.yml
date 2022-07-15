@@ -29,6 +29,10 @@ jobs:
         run: |
           curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
           composer update
+          
+
+      - name: Run migrations
+        run: |
           php artisan migrate
           
 
