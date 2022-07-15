@@ -77,7 +77,7 @@ jobs:
             APP_KEY: base64:ewNaZOhLg5sEm8bX4taP4YHqJIxMbfuoH5m9ud3Dz8U=
 
             DB_CONNECTION: mysql
-            DB_HOST: moviehandb.cvt0tk4kwbvo.ap-northeast-1.rds.amazonaws.com
+            DB_HOST: "moviehandb.cvt0tk4kwbvo.ap-northeast-1.rds.amazonaws.com"
             DB_PORT: 3306
             DB_DATABASE: moviehandb
             DB_USERNAME: admin
