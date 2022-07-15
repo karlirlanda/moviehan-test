@@ -56,10 +56,7 @@ jobs:
           MAIL_ENCRYPTION: tls
           MAIL_FROM_ADDRESS: "laravel@example.com"
           MAIL_FROM_NAME: "${APP_NAME}"
-        run: |
-          yes | php artisan migrate
           
-
       - name: Directory Permissions
         run: |
           chmod -R 777 ./
