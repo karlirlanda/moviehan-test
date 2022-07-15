@@ -27,7 +27,6 @@ jobs:
 
       - name: Directory Permissions
         run: |
-          copy . /var/www
           chmod -R 777 ./
           
       - name: Configure AWS credentials
