@@ -34,7 +34,7 @@ jobs:
 
       - name: Run migrations
         run: |
-          yes | php artisan migrate --force
+          yes | php artisan migrate
           
 
       - name: Directory Permissions
