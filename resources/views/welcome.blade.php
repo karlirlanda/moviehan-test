@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <!-- <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,5 +33,25 @@
                 </div>
             </div>
         </div>
-    </body>
+    </body> -->
+    <head>
+  <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="1280"
+    height="720"
+    data-setup="{}">
+    <source src="https://movie-han-movies.s3.ap-northeast-1.amazonaws.com/WWY-Quality/WWY1080.mp4" type="video/mp4" />
+    <source src="https://movie-han-movies.s3.ap-northeast-1.amazonaws.com/WWY-Quality/WWY1080.mp4" type="video/webm" />
+  </video>
+</body>
 </html>
