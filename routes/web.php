@@ -13,16 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// //USER PAGE
-// Route::middleware(['auth','verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// });
-
-// //ADMIN PAGE
-// Route::middleware(['auth','verified'])->get('/admin', function () {
-//     return view('admin');
-// });
-
 Route::get('/', function () {
     return view('welcome');
 });
