@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Controllers\Api\GenresController;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreGenreRequest extends FormRequest
