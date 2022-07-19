@@ -18,6 +18,10 @@
                 </div>
                 <div class="text-wrapper">
                     <p class="text"><b>ADMIN DASHBOARD</b></p>
+                    <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button>Logout</button>
+                </form>
                 </div>
                 <div class="bottom-text-wrapper">
                     <div class="bottom-text">

@@ -15,13 +15,10 @@ return new class extends Migration
     {
         Schema::create('last_watcheds', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('video_id');
-            $table->foreign('video_id')->references('id')->on('videos')->onDelete('cascade');
-            $table->unsignedInteger('stream_id');
-            $table->foreign('stream_id')->references('id')->on('streams')->onDelete('cascade');
             $table->timestamp('watched_at');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('stream_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('video_id')->constrained()->cascadeOnDelete();
         });
     }
 

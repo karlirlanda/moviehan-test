@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('video_likes', function (Blueprint $table) {
+        Schema::create('video_likes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('video_id');
-            $table->foreign('video_id')->references('id')->on('videos')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('video_id')->constrained()->cascadeOnDelete();
         });
     }
 

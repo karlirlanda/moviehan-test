@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('video_genres', function (Blueprint $table) {
+        Schema::create('video_tags', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('genre_id');
-            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
-            $table->unsignedInteger('video_id');
-            $table->foreign('video_id')->references('id')->on('videos')->onDelete('cascade');
+            $table->foreignId('tag_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('video_id')->constrained()->cascadeOnDelete();
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('video_genres');
+        Schema::dropIfExists('video_tags');
     }
 };
