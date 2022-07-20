@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('stream_url');
-            $table->timestamp('streamed_at');
             $table->boolean('is_active');
             $table->timestamps();
         });

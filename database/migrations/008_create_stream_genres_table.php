@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('stream_genres', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('stream_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('genre_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('stream_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('genre_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('video_genres', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('genre_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('video_id')->constrained()->cascadeOnDelete();;
+            $table->foreignId('genre_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('video_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 

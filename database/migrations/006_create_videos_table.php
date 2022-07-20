@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('duration');
             $table->json('cast');
             $table->boolean('is_active');
-            $table->year('year_released');
+            $table->string('year_released');
             $table->timestamps();
         });
     }

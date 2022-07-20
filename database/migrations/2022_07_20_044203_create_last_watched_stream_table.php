@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('video_likes', function (Blueprint $table) {
+        Schema::create('last_watched_stream', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('video_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('stream_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 
@@ -27,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('video_likes', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('last_watched_stream');
     }
 };

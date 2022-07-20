@@ -5,6 +5,8 @@ namespace App\Models;
 use App\Models\Videos;
 use App\Models\Streams;
 use App\Models\LastWatched;
+use App\Models\LastWatchedVideo;
+use App\Models\LastWatchedStream;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -57,8 +59,13 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Streams::class);
     }
 
-    public function last_watch()
+    public function last_watch_stream()
     {
-        return $this->hasMany(LastWatched::class);
+        return $this->belongsToMany(LastWatchedStream::class);
+    }
+
+    public function last_watch_videos()
+    {
+        return $this->belongsToMany(LastWatchedVideo::class);
     }
 }
