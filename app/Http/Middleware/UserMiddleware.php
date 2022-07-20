@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AdminMiddleware
+class UserMiddleware
 {
     /**
      * Handle an incoming request.
@@ -19,20 +19,20 @@ class AdminMiddleware
     {
         if(Auth::check())
         {
-            if(Auth::user()->is_admin == 1)
+            if(Auth::user()->is_admin == 0)
             {
                 return $next($request);
             }
             else
             {
-                return redirect('/user/dashboard')->with('message', 'Access denied, you are not an admin!');
+                return redirect('/admin/dashboard')->with('message', 'Access denied, you are not a regular user!');
             }
         }
         else
         {
             return redirect('login')->with('message', 'Please login first');
         }
-
+        
         return $next($request);
     }
 }

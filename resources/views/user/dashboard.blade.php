@@ -8,12 +8,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b8b94f6dc2.js" crossorigin="anonymous"></script>
         <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/Homepage/header.css">
-        <link rel="stylesheet" href="css/Homepage/genre nav.css">
-        <link rel="stylesheet" href="css/Homepage/livestream.css">
-        <link rel="stylesheet" href="css/Homepage/body.css">
-        <link rel="stylesheet" href="css/Homepage/bottom.css">
-        <link rel="stylesheet" href="css/Homepage/media queries/homepage media querie.css">
+        <link rel="stylesheet" href="{{URL::asset('css/Homepage/header.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('css/Homepage/genre nav.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('css/Homepage/livestream.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('css/Homepage/body.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('css/Homepage/bottom.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('css/Homepage/media queries/homepage media querie.css')}}">
         <title>Hans Movie - Watch TV Shows Online, Watch Movies Online</title>
          <!-- Session Status -->
          <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -25,7 +25,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-logo-wrapper">
-                <img src="pic/Homepage/last logo.png" alt="Hans Logo">
+                <img src="{{URL::asset('pic/Homepage/last logo.png')}}" alt="Hans Logo">
             </div>
             <div class="header-search-wrapper">
                 <input type="search" name="search" placeholder="Search">
@@ -78,12 +78,12 @@
             <!---Livestream Section--->
         <div class="livestream-container">
             <video class="bg-video" autoplay muted loop>
-                <source src="vid/Demon Slayer Trailer.mp4" type="video/mp4">
+                <source src="{{URL::asset('vid/Demon Slayer Trailer.mp4')}}" type="video/mp4">
             </video>
             <div class="livestream-wrapper">
                 <div class="livestream-content">
                     <div class="trends">
-                       <img class="trend-img" src="pic/Homepage/kimetsu no yaiba.png" alt="kimetsu">
+                       <img class="trend-img" src="{{URL::asset('pic/Homepage/kimetsu no yaiba.png')}}" alt="kimetsu">
                     </div>
                     <div class="livestream-grid">
                         <div class="livestreams">
@@ -111,61 +111,61 @@
                     <p>Recommended</p>
                 </div>
                 <div class="body-content">
-                    <img src="pic/Homepage/thumbnails/1st/weathering with you.png">
-                    <img src="pic/Homepage/thumbnails/1st/a silent voice.png">
-                    <img src="pic/Homepage/thumbnails/1st/saekano.png">
-                    <img src="pic/Homepage/thumbnails/1st/your name.png">
-                    <img src="pic/Homepage/thumbnails/1st/konosuba.png">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/weathering with you.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/a silent voice.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/saekano.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/your name.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/konosuba.png')}}">
                 </div>
                 <div class="text-wrapper">
                     <p>Action</p>
                 </div>
                 <div class="body-content">
-                    <img src="pic/Homepage/thumbnails/2nd/a day to die.png">
-                    <img src="pic/Homepage/thumbnails/2nd/ash and dust.png">
-                    <img src="pic/Homepage/thumbnails/2nd/avengers.png">
-                    <img src="pic/Homepage/thumbnails/2nd/beast.png">
-                    <img src="pic/Homepage/thumbnails/2nd/best years gone.png">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/a day to die.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/ash and dust.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/avengers.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/beast.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/best years gone.png')}}">
                 </div>
                 <div class="text-wrapper">
                     <p>Adventure</p>
                 </div>
                 <div class="body-content">
-                    <img src="pic/Homepage/thumbnails/3rd/blowback.png">
-                    <img src="pic/Homepage/thumbnails/3rd/bridges.png">
-                    <img src="pic/Homepage/thumbnails/3rd/cyber hell.png">
-                    <img src="pic/Homepage/thumbnails/3rd/doctor strange.png">
-                    <img src="pic/Homepage/thumbnails/3rd/dr dolittle 3.png">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/blowback.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/bridges.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/cyber hell.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/doctor strange.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/dr dolittle 3.png')}}">
                 </div>
                 <div class="text-wrapper">
                     <p>Sci-Fi</p>
                 </div>
                 <div class="body-content">
-                    <img src="pic/Homepage/thumbnails/4th/ghost in shell.png">
-                    <img src="pic/Homepage/thumbnails/4th/gianluca vacchi mucho mas.png">
-                    <img src="pic/Homepage/thumbnails/4th/girl in the picture.png">
-                    <img src="pic/Homepage/thumbnails/4th/in search of tomorrow.png">
-                    <img src="pic/Homepage/thumbnails/4th/instant karma.png">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/ghost in shell.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/gianluca vacchi mucho mas.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/girl in the picture.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/in search of tomorrow.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/instant karma.png')}}">
                 </div>
                 <div class="text-wrapper">
                     <p>Sport</p>
                 </div>
                 <div class="body-content">
-                    <img src="pic/Homepage/thumbnails/5th/spider head.png">
-                    <img src="pic/Homepage/thumbnails/5th/spider man.png">
-                    <img src="pic/Homepage/thumbnails/5th/the batman.png">
-                    <img src="pic/Homepage/thumbnails/5th/the last warrior.png">
-                    <img src="pic/Homepage/thumbnails/5th/the perfect game.png">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/spider head.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/spider man.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/the batman.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/the last warrior.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/the perfect game.png')}}">
                 </div>
                 <div class="text-wrapper">
                     <p>Fantasy</p>
                 </div>
                 <div class="body-content">
-                    <img src="pic/Homepage/thumbnails/6th/garcia y garcia.png">
-                    <img src="pic/Homepage/thumbnails/6th/mako.png">
-                    <img src="pic/Homepage/thumbnails/6th/pinocchio.png">
-                    <img src="pic/Homepage/thumbnails/6th/the tale of the king crab.png">
-                    <img src="pic/Homepage/thumbnails/6th/veneciafrenia.png">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/garcia y garcia.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/mako.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/pinocchio.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/the tale of the king crab.png')}}">
+                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/veneciafrenia.png')}}">
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth','verified'])->name('dashboard');
+Route::prefix('user')->middleware(['auth','verified','user'])->group(function()
+{
+    Route::get('/dashboard', function (){
+        return view('/user/dashboard');
+    })->name('dashboard');
+});
 
 Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function()
 {
-    Route::get('/', function (){
-        return view('admin');
-    })->name('name');
+    Route::get('/dashboard', function (){
+        return view('/admin/dashboard');
+    })->name('admin');
 });
 
 require __DIR__.'/auth.php';
