@@ -21,8 +21,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth','verified'])->name('dashboard');
 
-Route::get('/admin', function () {
-    return view('admin');
-})->middleware(['auth','verified','admin'])->name('admin');
+Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function()
+{
+    Route::get('/', function (){
+        return view('admin');
+    })->name('name');
+});
 
 require __DIR__.'/auth.php';
