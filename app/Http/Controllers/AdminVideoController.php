@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Genres;
 use App\Models\Videos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -23,12 +24,13 @@ class AdminVideoController extends Controller
         return view('videos.index', compact('videos'));
     }
 
-    // public function create()
-    // {
-    //     $genres = Genre::all();
+    public function create()
+    {
+        $videos = Videos::all();
+        $genres = Genres::all();
 
-    //     return view('admin.admin', compact('genres'));
-    // }
+        return view('admin.admin', compact('videos', 'genres'));
+    }
 
     public function store(Request $request)
     {

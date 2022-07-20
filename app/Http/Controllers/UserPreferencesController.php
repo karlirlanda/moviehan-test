@@ -23,7 +23,6 @@ class UserPreferencesController extends Controller
 
     public function store(Request $request)
     {
-
         $this->user_preference->create([
             'user_id' => auth()->user()->id
         ]);
