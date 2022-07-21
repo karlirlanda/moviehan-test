@@ -36,7 +36,7 @@
                             <span class="remember-me">Remember me</span>
                             <a class="need-help" href="{{route('password.request')}}">Forgot my password</a>
                             <!-- Validation Errors -->
-                            <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                            <x-auth-validation-errors class="mb-4" style="color: red;" :errors="$errors" />
                         </div>
                         <div class="new-in-moviehan">
                             <p class="new-in">New in Movie-Han?</p><a class="sign-up-now" href="{{route('register')}}"><b>Register</b></a><a>now</a>

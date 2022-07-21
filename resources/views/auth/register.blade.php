@@ -33,7 +33,7 @@
                         </div>
                         <div class="security-box">
                             <!-- Validation Errors -->
-                            <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                            <x-auth-validation-errors class="mb-4" style="color: red;" :errors="$errors" />
                         </div>
                         <div class="input-sign-in">
                             <input class="sign-in" type="submit" value="Register">

@@ -24,7 +24,7 @@
                     <div class="login-content">
                             <h1>Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.</h1>                        
                             <!-- Validation Errors -->
-                            <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                            <x-auth-validation-errors class="mb-4" style="color:red; padding-bottom: 2%;" :errors="$errors" />
                             <div class="input-email">
                             <input class="email" for="email" :value="old('email')"  id="email" type="email" name="email" placeholder="Please type your registered email address here" required autofocus>
                         </div>
