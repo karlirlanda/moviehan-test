@@ -75,18 +75,85 @@
                                         <td class="info">Email Address:</td>
                                         <td class="info">Cokealfonso@redhorse.com </td>
                                         <td  class="control-user">
-                                            <button class="button view" type="submit">Change Email</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
+                                            <button class="button view" type="submit" data-bs-toggle="modal" data-bs-target="#emailModal" data-bs-whatever="@mdo">Change Email</button>
+                                                <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Change Email</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="recipient-name" class="col-form-label">Old Email:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <label for="recipient-name" class="col-form-label">New Email:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <label for="recipient-name" class="col-form-label">Confirm Email:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Submit</button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                         <td class="info"> </td>
                                         <td class="info">Password:</td>
                                         <td class="info">************</td>
                                         <td  class="control-user">
-                                            <button class="button view" type="submit">Change password</button>
+                                            <button class="button view" type="submit" data-bs-toggle="modal" data-bs-target="#passwordModal" data-bs-whatever="@mdo">Change password</button>
+                                                <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                                <div class="mb-2">
+                                                                    <label for="recipient-name" class="col-form-label">Old Password:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <label for="recipient-name" class="col-form-label">New Password:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <label for="recipient-name" class="col-form-label">Confirm Password:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Submit</button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                         </td>
-                                        
+                                    </tr>  
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td  class="control-user">
+                                            <form action="{{route('logout')}}" method="POST">@csrf<button class="button view" type="submit">Log out</button></form>
+                                        </td>
                                     </tr>
+                                    <tr></tr>       
                                 </tbody>
                             </table>
                         </div>

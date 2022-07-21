@@ -27,7 +27,8 @@ Route::apiResource('user', UserController::class);
 Route::post('login', [UserController::class, 'login']);
 
 //USER CHANGE PASSWORD
-Route::post('/change-password', [UserController::class,'changePassword'])->middleware('auth:sanctum');
+// Route::post('/change-password/{user}', [UserController::class,'changePassword'])->middleware('auth:sanctum')->name('change-password');
+// Route::get('/change-password/{user}/edit', [UserController::class,'edit'])->middleware('auth:sanctum');
 
 //EMAIL VERIFICATION
 Route::post('email/verification-notification', [EmailVerificationController::class, 'sendVerificationEmail'])->middleware('auth:sanctum');

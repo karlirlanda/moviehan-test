@@ -37,15 +37,17 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Menu
                 </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuButton1" style="padding-bottom: 10px;">
-                        <div><a class="desc" href="{{route('dashboard')}}">Dashboard</a></div>
-                        <div><a class="desc" href="{{route('user-settings')}}">Settings</a></div>
-                        <form action="{{route('logout')}}" method="POST">
+                <div class="dropdown-content" aria-labelledby="dropdownMenuButton1" style="padding-bottom: 10px;">
+                        <div class="desc"><a href="{{route('dashboard')}}">Dashboard</a></div>
+                        <div class="desc"><a href="{{route('user-settings')}}">Settings</a></div>
+                        <div class="desc">
+                        <form class="desc-form"style="color: white;" action="{{route('logout')}}" method="POST">
                             @csrf
-                            <button class="desc" style="color: red; font-size: 18px; margin-left: 5%; background-color: transparent; border: none;" >
-                             Logout
+                            <button style="font-size: 18px; margin-left: 5%; background-color: transparent; border: none; cursor:pointer;" >
+                                Logout
                             </button>
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,60 +120,60 @@
                 </div>
                 <div class="body-content">
                     <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/1st/weathering with you.png')}}"></a>
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/a silent voice.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/saekano.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/your name.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/konosuba.png')}}">
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/1st/a silent voice.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/1st/saekano.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/1st/your name.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/1st/konosuba.png')}}"></a>
                 </div>
                 <div class="text-wrapper">
                     <p>Action</p>
                 </div>
                 <div class="body-content">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/a day to die.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/ash and dust.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/avengers.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/beast.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/2nd/best years gone.png')}}">
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/2nd/a day to die.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/2nd/ash and dust.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/2nd/avengers.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/2nd/beast.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/2nd/best years gone.png')}}"></a>
                 </div>
                 <div class="text-wrapper">
                     <p>Adventure</p>
                 </div>
                 <div class="body-content">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/blowback.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/bridges.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/cyber hell.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/doctor strange.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/3rd/dr dolittle 3.png')}}">
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/3rd/blowback.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/3rd/bridges.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/3rd/cyber hell.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/3rd/doctor strange.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/3rd/dr dolittle 3.png')}}"></a>
                 </div>
                 <div class="text-wrapper">
                     <p>Sci-Fi</p>
                 </div>
                 <div class="body-content">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/ghost in shell.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/gianluca vacchi mucho mas.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/girl in the picture.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/in search of tomorrow.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/4th/instant karma.png')}}">
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/4th/ghost in shell.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/4th/gianluca vacchi mucho mas.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/4th/girl in the picture.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/4th/in search of tomorrow.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/4th/instant karma.png')}}"></a>
                 </div>
                 <div class="text-wrapper">
                     <p>Sport</p>
                 </div>
                 <div class="body-content">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/spider head.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/spider man.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/the batman.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/the last warrior.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/5th/the perfect game.png')}}">
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/5th/spider head.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/5th/spider man.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/5th/the batman.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/5th/the last warrior.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/5th/the perfect game.png')}}"></a>
                 </div>
                 <div class="text-wrapper">
                     <p>Fantasy</p>
                 </div>
                 <div class="body-content">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/garcia y garcia.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/mako.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/pinocchio.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/the tale of the king crab.png')}}">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/6th/veneciafrenia.png')}}">
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/6th/garcia y garcia.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/6th/mako.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/6th/pinocchio.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/6th/the tale of the king crab.png')}}"></a>
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/6th/veneciafrenia.png')}}"></a>
                 </div>
             </div>
         </div>

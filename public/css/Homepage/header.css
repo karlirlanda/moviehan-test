@@ -172,7 +172,12 @@ img {
     z-index: 1;
     width: 50px;
   }
-  
+  .dropdown-content > .desc:hover{
+    background:rgb(130, 97, 221);
+  }
+  .dropdown-content > .desc >.desc-form button{
+    padding: 5px 5px;
+  }
   .dropdown-content a {
     color: black;
     padding: 10px 10px;

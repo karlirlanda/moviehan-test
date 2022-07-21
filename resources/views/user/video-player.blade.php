@@ -4,6 +4,7 @@
         <script src="https://kit.fontawesome.com/b8b94f6dc2.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{{URL::asset('css/Video Player/header.css')}}">
         <link rel="stylesheet" href="{{URL::asset('css/Video Player/player.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('css/Homepage/header.css')}}">
         <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
         <title>Hans Movie</title>
     </head>
@@ -19,17 +20,32 @@
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div class="header-profile-wrapper">
-                    <i class="fa-solid fa-bell"></i>
-                    <i class="fa-solid fa-sort-down"></i>
-                    <img src="{{URL::asset('pic/papa eugene.jpg')}}" alt="profile">
+                <i class="fa-solid fa-bell"></i>
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                    <div class="dropdown-content" aria-labelledby="dropdownMenuButton1" style="padding-bottom: 10px;">
+                        <div class="desc"><a href="{{route('dashboard')}}">Dashboard</a></div>
+                        <div class="desc"><a href="{{route('user-settings')}}">Settings</a></div>
+                        <div class="desc">
+                        <form class="desc-form"style="color: white;" action="{{route('logout')}}" method="POST">
+                            @csrf
+                            <button style="font-size: 18px; margin-left: 5%; background-color: transparent; border: none; cursor:pointer;" >
+                                Logout
+                            </button>
+                        </form>
+                        </div>
+                    </div>
                 </div>
+            </div>
             </div>
         </div>
     <!----Body---->
         <div class="video-player-container">
             <div class="video-player">
                 <video-js id="my-video" class="vjs-default-skin vjs-big-play-centered" controls preload="auto" muted data-setup="{}">
-                <source src="{{URL::asset('vid/Nayeon POP.mp4')}}" type="video/mp4" />
+                <source src="https://movie-han-movies.s3.ap-northeast-1.amazonaws.com/movies/13+Fanboy+output/13+Fanboy.m3u8" type="video/x-mpegURL" />
                 </video-js>
             </div>
         </div>

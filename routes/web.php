@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Authenticate;
 
 /*
@@ -36,10 +37,6 @@ Route::prefix('user')->middleware(['auth','verified','user'])->group(function()
 
 Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function()
 {
-    Route::get('/dashboard', function (){
-        return view('/admin/dashboard');
-    })->name('admin');
-
     Route::get('/account-settings', function (){
         return view('/admin/account-settings');
     })->name('account-settings');
@@ -56,5 +53,9 @@ Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function(
         return view('/admin/user-control');
     })->name('user-control');
 });
+
+// Route::post('/change-password', [UserController::class,'changePassword'])->middleware('auth:sanctum')->name('change-password');
+// Route::get('/change-password/{id}/edit', [UserController::class,'edit'])->middleware('auth:sanctum')->name('user-edit');
+
 
 require __DIR__.'/auth.php';
