@@ -37,14 +37,14 @@
     align-items: center;
 }
 
-.body-container > .body-wrapper > .body-content > img {
+.body-container > .body-wrapper > .body-content > a >img {
     height: 85%;
     width: 95%;
     margin: auto;
     border-radius: 3px;
 }
 
-.body-container > .body-wrapper > .body-content > img:hover {
+.body-container > .body-wrapper > .body-content > a > img:hover {
     transform: scale(1.1);
     transition: .5s;
 }

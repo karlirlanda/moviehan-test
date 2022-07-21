@@ -23,7 +23,7 @@
             <div class="sidebar">
                 <div class="sidebar-menu">
                     <center class="profile">
-                    <a href="{{route('dashboard')}}"><img src="{{URL::asset('/pic/last logo.png')}}" alt=""></a>
+                    <a href="{{route('user-control')}}"><img src="{{URL::asset('/pic/last logo.png')}}" alt=""></a>
                         <p>Admin</p>
                     </center>
                     <!--account setting end-->

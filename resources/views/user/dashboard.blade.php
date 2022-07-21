@@ -31,17 +31,22 @@
                 <input type="search" name="search" placeholder="Search">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="header-profile">
+            <div class="header-profile-wrapper">
                 <i class="fa-solid fa-bell"></i>
-                <i class="fa-solid fa-sort-down"></i>
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    </button>
-                    <ul style="background-image: url(pic/papa\ eugene.jpg);" class="select-logo">
-                        <li><a class="dropdown-item" href="{{route('dashboard')}}">Dashboard</a></li>
-                        <li><a class="dropdown-item" href="{{route('user-settings')}}">Settings</a></li>
-                        <form action="{{route('logout')}}" method="POST">@csrf<li><button class="dropdown-item">Logout</button></li></form>
-                    </ul>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                    <div class="dropdown-content" aria-labelledby="dropdownMenuButton1" style="padding-bottom: 10px;">
+                        <div><a class="desc" href="{{route('dashboard')}}">Dashboard</a></div>
+                        <div><a class="desc" href="{{route('user-settings')}}">Settings</a></div>
+                        <form action="{{route('logout')}}" method="POST">
+                            @csrf
+                            <button class="desc" style="color: red; font-size: 18px; margin-left: 5%; background-color: transparent; border: none;" >
+                             Logout
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,7 +117,7 @@
                     <p>Recommended</p>
                 </div>
                 <div class="body-content">
-                    <img src="{{URL::asset('pic/Homepage/thumbnails/1st/weathering with you.png')}}">
+                    <a href="{{route('video-player')}}"><img src="{{URL::asset('pic/Homepage/thumbnails/1st/weathering with you.png')}}"></a>
                     <img src="{{URL::asset('pic/Homepage/thumbnails/1st/a silent voice.png')}}">
                     <img src="{{URL::asset('pic/Homepage/thumbnails/1st/saekano.png')}}">
                     <img src="{{URL::asset('pic/Homepage/thumbnails/1st/your name.png')}}">

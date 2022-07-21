@@ -28,6 +28,10 @@ Route::prefix('user')->middleware(['auth','verified','user'])->group(function()
         return view('/user/account-settings');
     })->name('user-settings');
 
+    Route::get('/video-player', function (){
+        return view('/user/video-player');
+    })->name('video-player');
+
 });
 
 Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function()
