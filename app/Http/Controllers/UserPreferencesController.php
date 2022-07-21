@@ -16,5 +16,7 @@ class UserPreferencesController extends Controller
 
         $user->genres()->attach($request->input('genres', []));
         $user->categories()->attach($request->input('category', []));
+
+        return response()->json(["Success" => "User preferences created"]);
     }
 }

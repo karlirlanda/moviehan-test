@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
 {
-    public function show($id)
+  public function show($id)
   {
     $user = User::find($id);
 
@@ -18,14 +18,12 @@ class AdminUserController extends Controller
     }
   }
 
-
   public function all()
   {
     $user = User::all();
 
     return $user;
   }
-
 
   public function destroy($id)
   {
@@ -39,8 +37,8 @@ class AdminUserController extends Controller
     }
   }
 
-  public function user_history()
+  public function user_preferences(Request $request)
   {
-    
+    // return $user_preference;
   }
 }

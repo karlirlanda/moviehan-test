@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\LastWatchedVideo;
+use Illuminate\Support\Facades\Auth;
 
 class LastWatchedVideoController extends Controller
 {
@@ -11,10 +12,17 @@ class LastWatchedVideoController extends Controller
         'VideoViewed' => 'lastVideoWatched'
     ];
 
+
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
+
+
     public function lastVideoWatched()
     {
         $this->user->last_watched_video->create([
-            'user_id' => auth()->user()->id,
+            'user_id' =>  $this->user->id,
             'video_id' => $this->videos()->id
         ]);
     }

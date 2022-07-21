@@ -16,9 +16,7 @@ class AdminVideoController extends Controller
 
     public function index(Request $request)
     {
-
         $limit = ($request->limit) ? $request->limit : 50;
-
         $videos = Videos::visibleFor(request()->user())->latest()->paginate($limit)->withQueryString();
 
         return view('videos.index', compact('videos'));
@@ -26,15 +24,13 @@ class AdminVideoController extends Controller
 
     public function create()
     {
-        $videos = Videos::all();
+        $videos = new Videos();
         $genres = Genres::all();
-
         return view('admin.admin', compact('videos', 'genres'));
     }
 
     public function store(Request $request)
     {
-
         //for validation
         $request->validate([
             'thumbnail' => 'required|file',
@@ -47,9 +43,6 @@ class AdminVideoController extends Controller
             'is_active' => 'required|boolean',
             'year_released' => 'required|string|max:255',
         ]);
-
-        // print_r($request->all());
-        // die;
 
         //creating a new video
         $video = new Videos();
@@ -68,16 +61,15 @@ class AdminVideoController extends Controller
 
             $path = $request->file('thumbnail')->store('thumbnail', ['disk' => 's3']);
             $video->thumbnail = $path;
-            // print_r(Storage::disk('s3')->url($path));
-            // die;
         }
 
         $video->save();
 
+        //relationship
         $video->genres()->attach($request->input('genres', []));
         $video->tags()->attach($request->input('tags', []));;
 
-        return $video;
+        return response()->json(["Success" => " Video uploaded"]);
     }
 
     public function show($id)
@@ -99,28 +91,14 @@ class AdminVideoController extends Controller
         return $videos;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function edit()
+    {
 
-    // public function edit()
-    // {
+        $videos = Videos::orderBy('name')->pluck('name', 'id')->prepend('All Videos', '');
 
-    //     $videos = Auth::user()->videos()->orderBy('name')->pluck('name', 'id')->prepend('All Videos', '');
+        return $videos;
+    }
 
-    //     return $videos;
-    // }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update($id, Request $request)
     {
         $request->validate([
@@ -158,12 +136,6 @@ class AdminVideoController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $video = Videos::findOrFail($id);
@@ -183,7 +155,7 @@ class AdminVideoController extends Controller
 
     public function changeStatus(Request $request)
     {
-        $video = Videos::find($request->video_id);
+        $video = Videos::find($request->id);
         $video->is_active = $request->is_active;
         $video->save();
 

@@ -63,28 +63,14 @@ class AdminStreamController extends Controller
     return $streams;
   }
 
-  /**
-   * Show the form for editing the specified resource.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
-
   public function edit()
   {
 
-    $streams = Auth::user()->streams()->orderBy('name');
+    $streams = Streams::orderBy('name');
 
     return $streams;
   }
 
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
   public function update($id, Request $request)
   {
     $request->validate([
@@ -109,12 +95,6 @@ class AdminStreamController extends Controller
     }
   }
 
-  /**
-   * Remove the specified resource from storage.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
   public function destroy($id)
   {
     $stream = Streams::findOrFail($id);
@@ -129,6 +109,7 @@ class AdminStreamController extends Controller
 
   public function changeStatus(Request $request)
   {
+
     $stream = Streams::find($request->id);
     $stream->is_active = $request->is_active;
     $stream->save();
