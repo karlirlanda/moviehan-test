@@ -1,0 +1,97 @@
+@media only screen and (max-width: 1030px) {
+    .body-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .body-container > .body-wrapper {
+        height: 100%;
+        width: 70%;
+    }
+
+    .body-container > .body-wrapper > .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .body-container > .body-wrapper > .user-info {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .bottom-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bottom-container > .body-container-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bottom-container > .body-container-wrapper > .social-media {
+        width: 50%;
+    }
+
+    .bottom-container > .body-container-wrapper > .bottom-nav {
+        height: 100%;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .body-container > .body-wrapper > .account-info {
+        height: 100%;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .body-container > .body-wrapper > .account-info > .user-info {
+        display: none;
+    }
+
+    .bottom-container > .body-container-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bottom-container > .body-container-wrapper > .bottom-nav {
+        height: 100%;
+        width: 80%;
+        margin-left: 3em;
+    }
+
+    .bottom-container > .body-container-wrapper > .social-media {
+        margin-left: 8em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .body-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .body-container > .body-wrapper {
+        width: 80%;
+    }
+
+    .bottom-container > .body-container-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bottom-container > .body-container-wrapper > .bottom-nav {
+        height: 100%;
+        width: 80%;
+        margin-left: 3em;
+    }
+
+    .bottom-container > .body-container-wrapper > .social-media {
+        margin-left: 8em;
+    }
+}

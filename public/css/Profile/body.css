@@ -1,0 +1,96 @@
+.body-container {
+    height: 70vh;
+    width: 100%;
+    background-color: black;
+}
+
+.body-container > .body-wrapper {
+    height: 100%;
+    width: 54%;
+    background-color: rgb(226, 226, 226);
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.body-container > .body-wrapper > .title {
+    height: 5.5vh;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.body-container > .body-wrapper > .title > p {
+    font-weight: 600;
+    font-size: 2em;
+    font-family: inherit;
+}
+
+.body-container > .body-wrapper > .account-info {
+    height: 25vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.body-container > .body-wrapper > .account-info > .user-info {
+    margin-top: 15px;
+    color: rgb(99, 99, 99);
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.body-container > .body-wrapper > .account-info > .account-details {
+    margin-top: 15px;
+}
+
+.body-container > .body-wrapper > .account-info > .account-details > p {
+    padding-bottom: 10px;
+}
+
+.body-container > .body-wrapper > .account-info > .account-nav {
+    margin-top: 10px;
+    display: inline-flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.body-container > .body-wrapper > .account-info > .account-nav > a {
+    text-decoration: none;
+    margin-top: 5px;
+    padding-bottom: 21px;
+}
+
+.body-container > .body-wrapper > .settings {
+    height: 25vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.body-container > .body-wrapper > .settings > .settings-title {
+    margin-top: 15px;
+    color: rgb(99, 99, 99);
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.body-container > .body-wrapper > .settings > .settings-nav {
+    margin-top: 10px;
+    display: inline-flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.body-container > .body-wrapper > .settings > .settings-nav > a {
+    text-decoration: none;
+    margin-top: 5px;
+    padding-bottom: 21px;
+}

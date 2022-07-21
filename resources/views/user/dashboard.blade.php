@@ -25,23 +25,24 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-logo-wrapper">
-                <img src="{{URL::asset('pic/Homepage/last logo.png')}}" alt="Hans Logo">
+                <a href="{{route('dashboard')}}"><img src="{{URL::asset('pic/Homepage/last logo.png')}}" alt="Hans Logo"></a>
             </div>
             <div class="header-search-wrapper">
                 <input type="search" name="search" placeholder="Search">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="header-profile-wrapper">
+            <div class="header-profile">
                 <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-sort-down"></i>
-                <select style="background-image: url(pic/papa\ eugene.jpg);" class="select-logo">
-                    <option value="" disabled selected hidden></option>
-                    <option>Settings </option>
-                </select>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button>Logout</button>
-                </form>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+                    <ul style="background-image: url(pic/papa\ eugene.jpg);" class="select-logo">
+                        <li><a class="dropdown-item" href="{{route('dashboard')}}">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="{{route('user-settings')}}">Settings</a></li>
+                        <form action="{{route('logout')}}" method="POST">@csrf<li><button class="dropdown-item">Logout</button></li></form>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

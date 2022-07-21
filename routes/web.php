@@ -23,6 +23,11 @@ Route::prefix('user')->middleware(['auth','verified','user'])->group(function()
     Route::get('/dashboard', function (){
         return view('/user/dashboard');
     })->name('dashboard');
+
+    Route::get('/account-settings', function (){
+        return view('/user/account-settings');
+    })->name('user-settings');
+
 });
 
 Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function()
@@ -30,6 +35,22 @@ Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function(
     Route::get('/dashboard', function (){
         return view('/admin/dashboard');
     })->name('admin');
+
+    Route::get('/account-settings', function (){
+        return view('/admin/account-settings');
+    })->name('account-settings');
+
+    Route::get('/movie-control', function (){
+        return view('/admin/movie-control');
+    })->name('movie-control');
+
+    Route::get('/stream-control', function (){
+        return view('/admin/stream-control');
+    })->name('stream-control');
+
+    Route::get('/user-control', function (){
+        return view('/admin/user-control');
+    })->name('user-control');
 });
 
 require __DIR__.'/auth.php';
