@@ -179,4 +179,14 @@ class AdminVideoController extends Controller
             ]);
         }
     }
+
+
+    public function changeStatus(Request $request)
+    {
+        $video = Videos::find($request->video_id);
+        $video->is_active = $request->is_active;
+        $video->save();
+
+        return response()->json(['success' => 'Status changed.']);
+    }
 }

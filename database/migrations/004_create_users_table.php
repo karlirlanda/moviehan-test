@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('last_login_ip')->nullable();
             $table->timestamp('last_login_at')->nullable();
             $table->boolean('is_admin')->default(0);
-            $table->rememberToken();
             $table->timestamps();
         });
     }

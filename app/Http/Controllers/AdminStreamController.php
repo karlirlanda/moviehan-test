@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Streams;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminStreamController extends Controller
 {
-    public function index(Request $request)
+  public function index(Request $request)
   {
 
     $limit = ($request->limit) ? $request->limit : 50;
@@ -69,13 +70,13 @@ class AdminStreamController extends Controller
    * @return \Illuminate\Http\Response
    */
 
-  // public function edit()
-  // {
+  public function edit()
+  {
 
-  //   $streams = Auth::user()->streams()->orderBy('name')->pluck('name', 'id')->prepend('All streams', '');
+    $streams = Auth::user()->streams()->orderBy('name');
 
-  //   return $streams;
-  // }
+    return $streams;
+  }
 
   /**
    * Update the specified resource in storage.
@@ -124,5 +125,14 @@ class AdminStreamController extends Controller
         'message' => 'Stream successfully deleted'
       ]);
     }
+  }
+
+  public function changeStatus(Request $request)
+  {
+    $stream = Streams::find($request->id);
+    $stream->is_active = $request->is_active;
+    $stream->save();
+
+    return response()->json(['success' => 'Status changed.']);
   }
 }

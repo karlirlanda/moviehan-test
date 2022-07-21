@@ -38,4 +38,9 @@ class AdminUserController extends Controller
       ]);
     }
   }
+
+  public function user_history()
+  {
+    
+  }
 }
