@@ -136,7 +136,7 @@ body {
 .new-in-moviehan {
     color: white;
     font-family: 'Roboto Flex', sans-serif;
-    padding-top: 100px;
+    padding-top: 15%;
     display: flex;
 }
 
@@ -189,4 +189,8 @@ body {
 
 .bottom-wrapper > .bottom-div > .navs > a {
     padding: 0px 50px;
+}
+.mb-4
+{
+    margin-top: 25px;
 }
