@@ -182,10 +182,10 @@
     <div class="bottom-container">
         <div class="body-container-wrapper">
             <div class="social-media">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-youtube"></i>
+                <a href="https://www.facebook.com/Movie-Han-104067795723314"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/moviehan9/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/moviehan9"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UChcSzeNWS90rZlqCkyVPnUw"><i class="fa-brands fa-youtube"></i></a>
             </div>
             <div class="bottom-nav">
                 <a href="#">Help Center</a>

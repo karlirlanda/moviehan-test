@@ -11,7 +11,7 @@
         <div class="main-body">
             <div class="main-body-wrapper">
                 <div class="logo-wrapper">
-                    <a href="{{route('user-control')}}"><img class="logo" src="{{URL::asset('/pic/last logo.png')}}"></a>
+                    <a href="{{url('/')}}"><img class="logo" src="{{URL::asset('/pic/last logo.png')}}"></a>
                 </div>
                 <div class="sign-in-wrapper">
                     <a href="{{route('login')}}"><input class="submit" type="submit" value="Login"></a>

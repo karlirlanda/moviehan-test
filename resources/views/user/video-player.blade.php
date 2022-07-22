@@ -51,7 +51,12 @@
         </div>
         <div class="video-details">
             <div class="video-details-wrapper">
-                <h3>Nayeon - "POP" M/V</h3>
+                <div class="title-like">
+                    <h3>Nayeon - "POP" M/V</h3>
+                    <div class="like-container">
+                       <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
                 <h4>Twice</h4>
                 <h5>Genre: Pop, Music & Colorful</h5>
                 <h5>Released: June 24, 2022</h5>

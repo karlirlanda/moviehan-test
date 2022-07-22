@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Sidebar Dashboard Template With Sub Menu</title>
+        <title>Admin</title>
         <link rel="stylesheet" type="text/css" href="{{URL::asset('/css/livestreamcontrol.css')}}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -150,7 +150,7 @@
                                         <td></td>
                                         <td></td>
                                         <td  class="control-user">
-                                            <form action="{{route('logout')}}" method="POST">@csrf<button class="button view" type="submit">Log out</button></form>
+                                            <form action="{{route('logout')}}" method="POST">@csrf<button class="button view" style="background-color:red;" type="submit">Log out</button></form>
                                         </td>
                                     </tr>
                                     <tr></tr>       

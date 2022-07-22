@@ -51,21 +51,7 @@
                         <a href="#">Change account email</a>
                         <a href="#">Change password</a>
                     </div>
-                </div>
-                <hr>
-                <div class="settings">
-                    <div class="settings-title">
-                        <p>SETTINGS</p>
-                    </div>
-                    <div class="settings-blank">
-
-                    </div>
-                    <div class="settings-nav">
-                        <a href="#">Manage download devices</a>
-                        <a href="#">Download your personal information</a>
-                        <a href="#">Sign out of all devices</a>
-                    </div>
-                </div>
+                </div>                
             </div>
         </div>
         <div class="bottom-container">
