@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Genres;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Genre;
 
-class Streams extends Model
+class Stream extends Model
 {
     use HasFactory;
 
@@ -16,6 +16,6 @@ class Streams extends Model
 
     public function genres()
     {
-        return $this->hasMany(Genres::class);
+        return $this->belongsToMany(Genre::class);
     }
 }

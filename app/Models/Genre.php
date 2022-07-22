@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+namespace App\Models;
+
 use App\Models\User;
-use App\Models\Videos;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Categories extends Model
+class Genre extends Model
 {
     use HasFactory;
 
@@ -17,11 +19,11 @@ class Categories extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        $this->belongsToMany(User::class);
     }
 
-    public function videos()
+    public function categories()
     {
-        return $this->belongsToMany(Videos::class);
+        $this->belongsToMany(Category::class);
     }
 }

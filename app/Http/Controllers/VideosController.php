@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Videos;
-use Illuminate\Http\Request;
+use App\Models\Video;
 use Illuminate\Support\Facades\DB;
 
-class VideosController extends Controller
+class VideoController extends Controller
 {
-    public function get_url(Videos $video, $id)
+    public function get_url(Video $video, $id)
     {
-        $video = Videos::where('id', $id)->first();
+        $video = Video::where('id', $id)->first();
 
         $url = $video->video_url;
 

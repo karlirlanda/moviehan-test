@@ -2,30 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Genres;
-use App\Models\Videos;
+use App\Models\Genre;
+use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class AdminVideoController extends Controller
 {
+
     public function __construct()
     {
-        $this->video = new Videos();
+        $this->video = new Video();
     }
 
     public function index(Request $request)
     {
         $limit = ($request->limit) ? $request->limit : 50;
-        $videos = Videos::visibleFor(request()->user())->latest()->paginate($limit)->withQueryString();
+        $videos = Video::visibleFor(request()->user())->latest()->paginate($limit)->withQueryString();
 
         return view('videos.index', compact('videos'));
     }
 
     public function create()
     {
-        $videos = new Videos();
-        $genres = Genres::all();
+        $videos = new Video();
+        $genres = Genre::all();
         return view('admin.admin', compact('videos', 'genres'));
     }
 
@@ -43,9 +45,8 @@ class AdminVideoController extends Controller
             'is_active' => 'required|boolean',
             'year_released' => 'required|string|max:255',
         ]);
-
         //creating a new video
-        $video = new Videos();
+        $video = new Video();
 
         $video->category_id = $request->category_id;
         $video->title = $request->title;
@@ -74,7 +75,7 @@ class AdminVideoController extends Controller
 
     public function show($id)
     {
-        $videos = Videos::find($id);
+        $videos = Video::find($id);
 
         if ($videos) {
             return $videos;
@@ -86,7 +87,7 @@ class AdminVideoController extends Controller
 
     public function all()
     {
-        $videos = Videos::all();
+        $videos = Video::all();
 
         return $videos;
     }
@@ -94,7 +95,7 @@ class AdminVideoController extends Controller
     public function edit()
     {
 
-        $videos = Videos::orderBy('name')->pluck('name', 'id')->prepend('All Videos', '');
+        $videos = Video::orderBy('name')->pluck('name', 'id')->prepend('All Videos', '');
 
         return $videos;
     }
@@ -113,7 +114,7 @@ class AdminVideoController extends Controller
             'year_released' => 'string|max:255',
         ]);
 
-        $video = Videos::findOrFail($id);
+        $video = Video::findOrFail($id);
 
         if ($request->hasFile('thumbnail')) {
 
@@ -138,7 +139,7 @@ class AdminVideoController extends Controller
 
     public function destroy($id)
     {
-        $video = Videos::findOrFail($id);
+        $video = Video::findOrFail($id);
         $path = $video->thumbnail;
 
         $deleted = Storage::disk('s3')->delete($path);
@@ -155,7 +156,7 @@ class AdminVideoController extends Controller
 
     public function changeStatus(Request $request)
     {
-        $video = Videos::find($request->id);
+        $video = Video::find($request->id);
         $video->is_active = $request->is_active;
         $video->save();
 

@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Videos;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Video;
 
-class Tags extends Model
+class Tag extends Model
 {
     use HasFactory;
 
@@ -16,6 +16,6 @@ class Tags extends Model
 
     public function videos()
     {
-        return $this->belongsToMany(Videos::class);
+        return $this->belongsToMany(Video::class);
     }
 }

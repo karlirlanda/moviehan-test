@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Videos;
-use App\Models\Streams;
-use App\Models\LastWatched;
-use App\Models\LastWatchedVideo;
-use App\Models\LastWatchedStream;
+use App\Models\Genre;
+use App\Models\Video;
+use App\Models\Category;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -51,21 +49,42 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function videos()
     {
-        return $this->hasMany(Videos::class);
+        return $this->hasMany(Video::class);
     }
+
 
     public function streams()
     {
-        return $this->hasMany(Streams::class);
+        return $this->hasMany(Stream::class);
     }
+
+
+    public function likes()
+    {
+        return $this->belongsTo(Video::class, 'video_likes', 'user_id', 'video_id');
+    }
+
 
     public function last_watch_stream()
     {
-        return $this->belongsToMany(LastWatchedStream::class);
+        return $this->belongsToMany(Stream::class, 'last_watched_streams', 'user_id', 'stream_id');
     }
 
-    public function last_watch_videos()
+
+    public function last_watch_video()
     {
-        return $this->belongsToMany(LastWatchedVideo::class);
+        return $this->belongsToMany(Video::class, 'last_watched_videos', 'user_id', 'video_id');
+    }
+
+
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class);
+    }
+
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
     }
 }

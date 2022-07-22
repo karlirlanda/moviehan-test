@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Streams;
+use App\Models\Stream;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AdminStreamController extends Controller
 {
+
   public function index(Request $request)
   {
 
     $limit = ($request->limit) ? $request->limit : 50;
 
-    $streams = Streams::visibleFor(request()->user())->latest()->paginate($limit)->withQueryString();
+    $streams = Stream::visibleFor(request()->user())->latest()->paginate($limit)->withQueryString();
 
     return view('streams.index', compact('streams'));
   }
@@ -29,7 +31,7 @@ class AdminStreamController extends Controller
     ]);
 
     //creating a new stream
-    $stream = new Streams();
+    $stream = new Stream();
 
     $stream->name = $request->name;
     $stream->description = $request->description;
@@ -46,7 +48,7 @@ class AdminStreamController extends Controller
 
   public function show($id)
   {
-    $stream = Streams::find($id);
+    $stream = Stream::find($id);
 
     if ($stream) {
       return $stream;
@@ -58,7 +60,7 @@ class AdminStreamController extends Controller
 
   public function all()
   {
-    $streams = Streams::all();
+    $streams = Stream::all();
 
     return $streams;
   }
@@ -66,7 +68,7 @@ class AdminStreamController extends Controller
   public function edit()
   {
 
-    $streams = Streams::orderBy('name');
+    $streams = Stream::orderBy('name');
 
     return $streams;
   }
@@ -80,7 +82,7 @@ class AdminStreamController extends Controller
       'is_active' => 'boolean',
     ]);
 
-    $stream = Streams::findOrFail($id);
+    $stream = Stream::findOrFail($id);
 
     $updated = $stream->update($request->all());
 
@@ -97,7 +99,7 @@ class AdminStreamController extends Controller
 
   public function destroy($id)
   {
-    $stream = Streams::findOrFail($id);
+    $stream = Stream::findOrFail($id);
     $deleted = $stream->delete();
 
     if ($deleted) {
@@ -110,7 +112,7 @@ class AdminStreamController extends Controller
   public function changeStatus(Request $request)
   {
 
-    $stream = Streams::find($request->id);
+    $stream = Stream::find($request->id);
     $stream->is_active = $request->is_active;
     $stream->save();
 

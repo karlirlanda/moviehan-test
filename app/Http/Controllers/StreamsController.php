@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Streams;
-use Illuminate\Http\Request;
+use App\Models\Stream;
 
-class StreamsController extends Controller
+class StreamController extends Controller
 {
-    public function stream_url(Streams $stream, $id)
+    public function stream_url(Stream $stream, $id)
     {
-        $stream = Streams::where('id', $id)->first();
+        $stream = Stream::where('id', $id)->first();
 
         $url = $stream->stream_url;
 

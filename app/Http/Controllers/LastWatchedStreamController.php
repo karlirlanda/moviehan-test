@@ -17,8 +17,6 @@ class LastWatchedStreamController extends Controller
         $this->user = Auth::user();
     }
 
-
-
     public function lastStreamWatched()
     {
         $this->user->last_watched_stream->create([

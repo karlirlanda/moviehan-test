@@ -3,21 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\LastWatchedVideo;
+use App\Models\LastWatchedVideos;
 use Illuminate\Support\Facades\Auth;
 
-class LastWatchedVideoController extends Controller
+class LastWatchedVideosController extends Controller
 {
     protected $listener =  [
         'VideoViewed' => 'lastVideoWatched'
     ];
 
-
     public function __construct()
     {
         $this->user = Auth::user();
     }
-
 
     public function lastVideoWatched()
     {
