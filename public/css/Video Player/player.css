@@ -27,15 +27,14 @@
 }
 
 .video-details > .video-details-wrapper > .title-like {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     justify-content: start;
     align-items: center;
 }
 
 .video-details > .video-details-wrapper > .title-like > .like-container {
     display: flex;
-    justify-content: start;
+    justify-content: end;
     align-items: center;
     margin-left: 10px;
 }

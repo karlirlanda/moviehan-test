@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Video;
 use Illuminate\Support\Facades\DB;
 
-class VideoController extends Controller
+class VideosController extends Controller
 {
     public function get_url(Video $video, $id)
     {

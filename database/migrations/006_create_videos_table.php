@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('thumbnail');
             $table->string('title');
-            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('description');
             $table->string('video_url');
             $table->string('duration');

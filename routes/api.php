@@ -10,7 +10,7 @@ use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AdminVideoController;
 use App\Http\Controllers\Api\GenresController;
 use App\Http\Controllers\AdminStreamController;
-use App\Http\Controllers\UserPreferencesController;
+use App\Http\Controllers\UserPreferenceController;
 use App\Http\Controllers\Api\EmailVerificationController;
 
 /*
@@ -70,7 +70,7 @@ Route::get('/stream/view/{id}', [StreamsController::class, 'stream_url'])->name(
 
 
 //Route for user Preference 
-Route::post('/user/registration/preference', [UserPreferencesController::class, 'store'])->name('user_preference');
+Route::post('/user/registration/preference', [UserPreferenceController::class, 'store'])->name('user_preference');
 
 //change status stream
 Route::post('/streams/status', [AdminStreamController::class, 'changeStatus'])->name('changeStatus_stream');

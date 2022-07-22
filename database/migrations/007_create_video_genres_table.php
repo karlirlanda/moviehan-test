@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('video_genres', function (Blueprint $table) {
+        Schema::create('genre_video', function (Blueprint $table) {
             $table->id();
             $table->foreignId('genre_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('video_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
