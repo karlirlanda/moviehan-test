@@ -25,10 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Copy .env file
-        run: |
-          cp .env.example .env
-
       - name: Directory Permissions
         run: |
           chmod -R 777 ./
