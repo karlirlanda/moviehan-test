@@ -45,15 +45,50 @@
                     </div>
                     <div class="account-details">
                         <p>(Username/Email)</p>
-                        <p>Password: *********</p>
-                    </div>
-                    <div class="account-nav">
-                        <a href="#">Change account email</a>
-                        <a href="#">Change password</a>
-                    </div>
-                </div>                
-            </div>
-        </div>
+                        Password:
+                                        <button class="button view" type="submit" data-bs-toggle="modal" data-bs-target="#passwordModal" data-bs-whatever="@mdo">Change password</button>
+                                                <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                        <div class="modal-body">
+                                        <form action="{{route('userupdate-Password')}}" method="POST">
+
+                                           @csrf
+
+                                            <div>
+                                                <label>Old Password</label>
+                                                <input class="form-control" type="password" name="user_old_password" id ="useroldPasswordInput">
+
+                                            </div>
+
+                                            <div>
+                                                <label>New Password</label>
+                                                <input class="form-control" type="password" name="user_new_password" id ="usernewPasswordInput">
+                                            </div>
+
+                                            <div>
+                                                <label>Confirm Password</label>
+                                                <input class="form-control" type="password" name="user_new_password_confirmation" id ="userconfirmNewPasswordInput">
+                                            </div>
+
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <input type="submit" class="btn btn-success">
+                                            </div>
+                                                  </form>
+                                             </div>
+                                                               
+                                                </div>
+                                                  </div> 
+
+                                                      </div>
+                        
+                                                    
+
+
         <div class="bottom-container">
             <div class="body-container-wrapper">
                 <div class="social-media">
@@ -76,5 +111,6 @@
                 </div>
             </div>
         </div>
+                    </div>
     </body>
 </html>
