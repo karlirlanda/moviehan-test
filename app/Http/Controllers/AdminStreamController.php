@@ -119,3 +119,4 @@ class AdminStreamController extends Controller
     return response()->json(['success' => 'Status changed.']);
   }
 }
+

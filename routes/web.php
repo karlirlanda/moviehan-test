@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\NotifController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Authenticate;
+use App\Http\Controllers\AdminUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,9 @@ Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function(
 });
 
 Route::get('send', [NotifController::class,"sendnotification"]);
+
+Route::get('/change-password,', [App\Http\Controllers\AdminUserController::class, 'changePassword'])->name('change-password');
+Route::post('/change-password,', [AdminUserController::class, 'updatePassword'])->name('update-password');
 
 // Route::post('/change-password', [UserController::class,'changePassword'])->middleware('auth:sanctum')->name('change-password');
 // Route::get('/change-password/{id}/edit', [UserController::class,'edit'])->middleware('auth:sanctum')->name('user-edit');

@@ -45,7 +45,7 @@
         <div class="video-player-container">
             <div class="video-player">
                 <video-js id="my-video" class="vjs-default-skin vjs-big-play-centered" controls preload="auto" muted data-setup="{}">
-                <source src="https://movie-han-movies.s3.ap-northeast-1.amazonaws.com/movies/Konosuba/Konosuba.m3u8" type="video/x-mpegURL" />
+                <source src="https://movie-han-movies.s3.ap-northeast-1.amazonaws.com/movies/Weathering+with+You/Weathering+with+You.m3u8" type="video/x-mpegURL" />
                 </video-js>
             </div>
         </div>

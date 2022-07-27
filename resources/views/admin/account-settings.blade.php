@@ -121,28 +121,31 @@
                                                         <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <div class="modal-body">
-                                                                <div class="mb-2">
-                                                                    <label for="recipient-name" class="col-form-label">Old Password:</label>
-                                                                    <input type="text" class="form-control" id="recipient-name">
-                                                                </div>
-                                                                <div class="mb-2">
-                                                                    <label for="recipient-name" class="col-form-label">New Password:</label>
-                                                                    <input type="text" class="form-control" id="recipient-name">
-                                                                </div>
-                                                                <div class="mb-2">
-                                                                    <label for="recipient-name" class="col-form-label">Confirm Password:</label>
-                                                                    <input type="text" class="form-control" id="recipient-name">
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Submit</button>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="modal-body">
+                                        <form action="{{route('update-password')}}" method="POST">
+
+                                           @csrf
+
+                                            <div>
+                                                <label>Old Password</label>
+                                                <input class="form-control" type="password" name="old_password" id ="oldPasswordInput">
+
+                                            </div>
+
+                                            <div>
+                                                <label>New Password</label>
+                                                <input class="form-control" type="password" name="new_password" id ="newPasswordInput">
+                                            </div>
+
+                                            <div>
+                                                <label>Confirm Password</label>
+                                                <input class="form-control" type="password" name="new_password_confirmation" id ="confirmNewPasswordInput">
+                                            </div>
+
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <input type="submit" class="btn btn-success">
+                                            </div>
+                                    </form>
                                         </td>
                                     </tr>  
                                     <tr>
