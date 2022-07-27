@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tag_video', function (Blueprint $table) {
+        Schema::create('video_tags', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('tag_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('video_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('tag_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('video_id')->constrained()->cascadeOnDelete();
         });
     }
 

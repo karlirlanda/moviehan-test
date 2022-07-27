@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Stream;
 
-class StreamsController extends Controller
+class StreamController extends Controller
 {
     public function stream_url(Stream $stream, $id)
     {

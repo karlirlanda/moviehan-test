@@ -79,31 +79,42 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
-                                        <form>
-                                          <div class="mb-2">
-                                            <label for="recipient-name" class="col-form-label">Header:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                          </div>
-                                           <div class="mb-2">
-                                            <label for="recipient-name" class="col-form-label">Body:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                          </div>
-                                           <div class="mb-2">
-                                            <label for="recipient-name" class="col-form-label">Action Text:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                          </div>
-                                           <div class="mb-2">
-                                            <label for="recipient-name" class="col-form-label">URL:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                          </div>
-                                           <div class="mb-2">
-                                            <label for="recipient-name" class="col-form-label">Footer:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                          </div>
-                                        </form>
-                                      </div>
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary">Submit</button>
+                                      <form action="{{url('send')}}" method="GET">
+
+                                            @csrf
+
+
+                                            <div>
+                                                <label>HEADER</label>
+                                                <input class="form-control" type="text" name="greeting">
+                                            </div>
+
+                                            <div>
+                                                <label>BODY</label>
+                                                <input class="form-control" type="text" name="body">
+                                            </div>
+
+                                            <div>
+                                                <label>ACTION TEXT</label>
+                                                <input class="form-control" type="text" name="actiontext">
+                                            </div>
+
+                                            <div>
+                                                <label>URL</label>
+                                                <input class="form-control" type="text" name="actionurl">
+                                            </div>
+
+                                            <div>
+                                                <label>FOOTER</label>
+                                                <input class="form-control" type="text" name="lastline">
+                                            </div>
+
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <input type="submit" class="btn btn-success">
+                                            </div>
+                                    </form>
+
+
                                       </div>
                                     </div>
                                   </div>
@@ -175,8 +186,8 @@
                                 <tr>
                                     <td class="info">5</td>
                                     <td class="info"><img src="admin.png"/></td>
-                                    <td class="info">Irlanda, Karl Eric</td>
-                                    <td class="info">karlirlanda@gmail.com</td>
+                                    <td class="info">Irlanda, Karl Eric</td> 
+                                     <td class="info">karlirlanda@gmail.com</td>
                                     <td class="info">BR</td>
                                     <td class="control-user">
                                         <button class="button view" type="submit">View recent activities</button>
@@ -240,7 +251,7 @@
                                           <div class="modal-body">
                                             <form>
                                               <div class="mb-2">
-                                                <label for="recipient-name" class="col-form-label">Are you sure you want to DELETE?</label>
+                                                < class="col-form-label">Are you sure you want to DELETE?</label>
                                               </div>
                                             </form>
                                           </div>

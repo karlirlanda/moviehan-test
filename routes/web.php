@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\NotifController;
 use Illuminate\Support\Facades\Authenticate;
 
 /*
@@ -53,6 +54,8 @@ Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function(
         return view('/admin/user-control');
     })->name('user-control');
 });
+
+Route::get('send', [NotifController::class,"sendnotification"]);
 
 // Route::post('/change-password', [UserController::class,'changePassword'])->middleware('auth:sanctum')->name('change-password');
 // Route::get('/change-password/{id}/edit', [UserController::class,'edit'])->middleware('auth:sanctum')->name('user-edit');

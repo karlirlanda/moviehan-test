@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('like_video', function (Blueprint $table) {
+        Schema::create('video_likes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('video_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
