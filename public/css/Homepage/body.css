@@ -1,0 +1,51 @@
+.body-container {
+    height: 80%;
+    width: 100%;
+}
+
+.body-container > .body-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 54%;
+    left: 0;
+}
+
+.body-container > .body-wrapper > .text-wrapper {
+    height: 5vh;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.body-container > .body-wrapper > .text-wrapper > p {
+    font-weight: bold;
+    color: white;
+}
+
+.body-container > .body-wrapper > .body-content {
+    height: 25%;
+    width: 100%;
+    background-color: black;
+    margin: 0 0 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(324px, 2fr));
+    justify-content: end;
+    align-items: center;
+}
+
+.body-container > .body-wrapper > .body-content > a >img {
+    height: 85%;
+    width: 95%;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.body-container > .body-wrapper > .body-content > a > img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+

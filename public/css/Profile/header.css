@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    background-color: black;
+}
+
+.header-container {
+    background-color: black;
+    height: 10vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header-container > .header-wrapper {
+    height: 83%;
+    width: 100%;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+}
+
+.header-container > .header-wrapper > img {
+    height: 12vh;
+    width: auto;
+}
+
+.header-container > .header-profile {
+    width: 100%;
+    height: 83%;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+}
+
+.header-container > .header-profile > .dropdown {
+    margin-right: 20px;
+}
+
+.header-container > .header-profile > .dropdown > .btn {
+    height: 2.7em;
+    width: 2.8em;
+    background-image: url('../../pic/papa\ eugene.jpg');
+    background-size: cover;
+    color: transparent;
+}
+

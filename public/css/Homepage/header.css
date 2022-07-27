@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #999;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.header-container { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .4);
+    z-index: 2;
+}
+
+.header-container > .header-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container > .header-wrapper > .header-logo-wrapper {
+    width: 18%;
+    height: 100%;
+    margin-left: 3em;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+.header-container > .header-wrapper > .header-logo-wrapper > img {
+    width: 110px;
+    height: 50%;
+}
+
+.header-container > .header-wrapper > .header-search-wrapper { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container > .header-wrapper > .header-search-wrapper > input {
+    border: none;
+    padding: 0.4rem 1.3rem;
+    outline-color: rgb(0, 113, 158);
+    border-radius: 8px 0px 0px 8px;
+    outline-width: 0px;
+    background-color: rgb(85, 84, 84);
+    color: white;
+}
+
+.header-container > .header-wrapper > .header-search-wrapper > input:focus {
+    border: solid 1px;
+    border-color: rgb(75, 131, 252);
+}
+
+.header-container > .header-wrapper > .header-search-wrapper > input::placeholder {
+    color: rgb(175, 164, 164);
+}
+
+.header-container > .header-wrapper > .header-search-wrapper > button {
+    border: none;
+    padding: 0.4rem 1.3rem;
+    border-radius: 0px 8px 8px 0px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+}
+
+.header-container > .header-wrapper > .header-search-wrapper > button:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.header-container > .header-wrapper > .header-profile-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-flow: row;
+}
+
+.header-container > .header-wrapper > .header-profile-wrapper > .fa-sort-down {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    
+}
+
+.header-container > .header-wrapper > .header-profile-wrapper > .fa-solid {
+    margin-right: 1em;
+    color: white;
+    cursor: pointer;
+}
+
+.header-container > .header-wrapper > .header-profile-wrapper > .fa-solid:hover {
+    transition: .5s;
+    color: rgb(130, 97, 221);
+}
+
+.header-container > .header-wrapper > .header-profile-wrapper > .select-logo {
+    background-size: cover;
+    height: 3.2em;
+    width: 3.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    
+}
+.dropbtn { 
+    background-color: transparent;
+    background-image: url("alzon.jpg");
+    background-size: cover;
+    color: transparent;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    background-size: cover;
+  }
+
+  .dropdown > button {
+    position: relative;
+    display: inline-block;
+    background-size: cover;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-right: 70px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 50px;
+  }
+  .dropdown-content > .desc:hover{
+    background:rgb(130, 97, 221);
+  }
+  .dropdown-content > .desc >.desc-form button{
+    padding: 5px 5px;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: transparent}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }

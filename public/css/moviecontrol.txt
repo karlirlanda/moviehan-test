@@ -1,0 +1,168 @@
+    <button class="add_new btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">+Add New</button>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Add New</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form>
+                                          <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Thumbnail:</label>
+                                            <input type="file" class="form-control" id="recipient-name" onchange="readURL(this)" accept="Image/*">
+                                          </div>
+                                          <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Title:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Description:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Cast:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Duration:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Year Release:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Genre:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Tags:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Status:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                        </form>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <!---end of add modal----->
+                            <!---Delete modal----->
+                            <button class="add_new btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@mdo">Delete
+                            </button>
+                                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form>
+                                          <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Are you sure you want to DELETE?</label>
+                                          </div>
+                                        </form>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+                                        <button type="button" class="btn btn-primary">Cancel</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!----Update modal---->
+                            <button class="add_new btn" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-whatever="@mdo">Update
+                            </button>
+
+                                <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Update</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form>
+                                          <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Thumbnail:</label>
+                                            <input type="file" class="form-control" id="recipient-name" onchange="readURL(this)" accept="Image/*">
+                                          </div>
+                                          <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Title:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Description:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Cast:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Duration:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Year Release:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Genre:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Tags:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                           <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">Status:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                          </div>
+                                        </form>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            <!---View modal---------->
+                             <button class="add_new btn" data-bs-toggle="modal" data-bs-target="#viewModal" data-bs-whatever="@mdo">View</button>
+                                <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Movie Description</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form>
+                                          <div class="mb-2">
+                                            <label for="recipient-name" class="col-form-label">
+                                                <h6>Title:</h6>
+                                                <h6>Video url:</h6>
+                                                <h6>Description:</h6>
+                                                <h6>Year release:</h6>
+                                                <h6>Genre:</h6>
+                                                <h6>Status:</h6>
+                                            </label>
+                                          </div>
+                                        </form>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>

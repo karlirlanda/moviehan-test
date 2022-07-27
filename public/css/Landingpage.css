@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 969px;
+    width: 100%;
+}
+
+.main-body {
+    background-image: url("../pic/Landingpage/main\ bg.png");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-body > .main-body-wrapper > .logo-wrapper > a > .logo {
+    height: 120px;
+    width: 270px;
+}
+
+.main-body > .main-body-wrapper > .sign-in-wrapper {
+    float: right;
+    margin-right: 20px;
+    border-radius: 5px;
+    position: relative;
+    right: 30px;
+    bottom: 88px;
+}
+
+.main-body > .main-body-wrapper > .sign-in-wrapper > a > .submit {
+    background-color: rgb(146, 88, 255);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    right: 30px;
+    font-size: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.main-body > .main-body-wrapper > .sign-in-wrapper > a > .submit:hover {
+    background-color: rgb(122, 50, 255);
+    cursor: pointer;
+}
+
+.main-body > .main-body-wrapper > .text-wrapper {
+    padding-top: 230px;
+    height: 350px;
+    width: 40%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.main-body > .main-body-wrapper > .text-wrapper > .text {
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 50px;
+}
+
+.main-body > .main-body-wrapper > .text-wrapper > .text2 {
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.main-body > .main-body-wrapper > .text-wrapper > .text2 > a {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.main-body > .main-body-wrapper > .text-wrapper > .text2 > a:hover {
+    text-decoration: underline;
+}
+
+.bottom-text-wrapper {
+    width: 100%;
+    height: 257px;
+    background-color: white;
+    border-top: solid 8px rgb(107, 107, 107);
+    color: white;
+    background-color: black;
+    display: flex;
+}
+
+.bottom-text-wrapper > .bottom-text {
+    width: 20%;
+    height: 70%;
+    margin: 60px 195px 17px 450px;
+    margin-top: 60px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.2em;
+}
+
+.bottom-text-wrapper > .bottom-text > p {
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.bottom-text-wrapper > .bottom-video {
+    width: 30%;
+    height: 99%;
+    margin: 2px 20px 0px 0px;
+}
+
+.bottom-text-wrapper > .bottom-video > .video-loop {
+    height: 250px;
+    width: 425px;
+    background: url('../pic/Landingpage/tv.png') transparent;
+    background-size: cover;
+    position: relative;
+}
+
+.bottom-text-wrapper > .bottom-video > .video-loop > video {
+    height: 217px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+}
