@@ -5,8 +5,9 @@
 }
 
 .body-container > .body-wrapper {
-    height: 35%;
-    width: 40%;
+    height: 100%;
+    max-height: 100%;
+    width: 50vw;
     background-color: rgb(226, 226, 226);
     margin: auto;
     padding: 10px 20px;
@@ -43,11 +44,11 @@
 }
 
 .body-container > .body-wrapper > .account-info > .account-details {
-    margin-top: 15px;
+    margin-top: 16%;
 }
 
 .body-container > .body-wrapper > .account-info > .account-details > p {
-    padding-bottom: 10px;
+    padding-bottom: 12px;
 }
 
 .body-container > .body-wrapper > .account-info > .account-nav {

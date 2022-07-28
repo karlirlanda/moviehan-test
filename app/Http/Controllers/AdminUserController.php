@@ -79,6 +79,41 @@ class AdminUserController extends Controller
     dd('Password Changed Successfully!');
   }
 
+  public function userchangePassword()
+  {
+    return view('userchange-Password');
+  }
+
+  public function userupdatePassword(Request $request)
+  {
+
+
+    #Validation
+    $request->validate([
+
+      'user_old_password' => 'required',
+
+      'user_new_password' => 'required|confirmed',
+
+    ]);
+
+    #Match the old password
+    if(!Hash::check($request->user_old_password, auth()->user()->password)){
+        dd("Old Password Doesnt Match");
+    }
+
+
+    
+    #Update new password
+    User::whereId(auth()->user()->id)->update([
+      'password' => Hash::make($request->user_new_password)
+
+    ]);
+
+    dd("Password Changed Successfully");
+  }
+
+
 
 
 
