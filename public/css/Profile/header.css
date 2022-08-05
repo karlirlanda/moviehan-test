@@ -11,6 +11,20 @@ body {
     background-color: black;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(58, 58, 58);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(124, 120, 120);
+    border-radius: 10px;
+}
+
 .header-container {
     background-color: black;
     height: 10vh;
