@@ -21,19 +21,16 @@
                 </div>
                 <div class="login-content-wrapper">
                     <div class="login-content">
-                            <h1>Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.</h1>                        
+                        <h1>Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.</h1>                        
                         
                         @csrf
                         <div class="input-sign-in">
-                            <button class="sign-in">Resend Email Verification</button>
+                            <form class="input-logout" method="POST" action="{{ route('logout') }}">
+                                <button class="verify-btn">Resend Email Verification</button>
+                                <button class="log-out-btn">Logout</button>
+                            @csrf
+                            </form>
                         </div>
-                        </form>
-                        <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <div class="input-sign-in">
-                            <button class="sign-in" >Logout</button>
-                        </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -56,6 +53,5 @@
                 </div>
             </div>
         </div>
-        </form>
     </body>
 </html>
