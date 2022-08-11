@@ -1,0 +1,77 @@
+@media only screen and (max-width: 1170px) {
+    html {
+        background-color: black;
+    }
+    .main-body {
+        height: 100%;
+        background-color: black;
+    }
+
+
+    .main-body > .main-body-wrapper > .text-wrapper {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .main-body > .main-body-wrapper > .bottom-text-wrapper {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-body > .main-body-wrapper > .bottom-text-wrapper > .bottom-text {
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 957px) {
+    .main-body {
+        flex-direction: column;
+    }
+
+    .main-body > .main-body-wrapper > .text-wrapper > .text, .text2 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .main-body > .main-body-wrapper > .text-wrapper > .text, .text2 {
+        font-size: 2.2em;
+    }
+}
+
+@media only screen and (max-width: 796px) {
+    .main-body > .main-body-wrapper > .bottom-text-wrapper > .bottom-text {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 685px) {
+    .main-body > .main-body-wrapper > .text-wrapper {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .main-body > .main-body-wrapper > .text-wrapper > .text, .text2 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .main-body > .main-body-wrapper > .text-wrapper {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main-body > .main-body-wrapper > .text-wrapper > .text, .text2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .main-body > .main-body-wrapper > .text-wrapper > .text {
+        display: flex;
+        margin-left: 65px;
+    }
+}

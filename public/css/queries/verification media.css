@@ -8,17 +8,14 @@
     }
 
     .main-bg > .main-body-wrapper > .login-content-wrapper {
-        height: 60%;
-        width: 50%;
+        height: 40%;
+        width: 40%;
         flex-direction: column;
-    }
-
-    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .security-box {
-        width: 240px;
+        font-size: .8em;
     }
 
     .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-sign-in > .sign-in {
-        width: 100%;
+        width: 83.9%;
     }
 
     .main-bg > .bottom-wrapper {
@@ -26,7 +23,19 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1330px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper {
+        height: 42%;
+    }
+}
+
+@media only screen and (max-width: 1166px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper {
+        height: 45%;
+    }
+}
+
+@media only screen and (max-width: 1064px) {
     .main-bg {
         height: 100%
     }
@@ -36,15 +45,14 @@
     }
 
     .main-bg > .main-body-wrapper > .login-content-wrapper {
-        height: 60%;
-        width: 90%;
+        height: 40%;
+        width: 60%;
         flex-direction: column;
     }
 
-    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-username > .username {
-        font-size: 1.2em;
+    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content {
+        font-size: 1em;
     }
-
 
     .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-email > .email {
         font-size: 1.2em;
@@ -58,17 +66,55 @@
         width: 82.5%;
         font-size: 1.2em;
     }
-}
 
-@media only screen and (max-width: 550px) {
-    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-sign-in {
-        margin-left: 45px;
+    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .check-box-input > .check-box {
+        height: 20px;
+        width: 20px;
     }
 
-    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .already-have {
-        margin-left: 45px;
+    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .check-box-input > .remember-me {
+        font-size: 1.2em;
+    }
+
+    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .check-box-input > .need-help {
+        font-size: 1.2em;
     }
 }
+
+@media only screen and (max-width: 785px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper {
+        height: 45%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper {
+        height: 37%;
+        width: 75%;
+        font-size: .7em;
+    }
+}
+
+@media only screen and (max-width: 686px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper {
+        height: 37%;
+    }
+}
+
+@media only screen and (max-width: 582px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper {
+        height: 38%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper {
+        height: 40%;
+        width: 75%;
+        font-size: .65em;
+    }
+}
+   
 
 @media only screen and (max-width: 425px) {
     * {
@@ -96,7 +142,6 @@
 
     .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-sign-in > .sign-in {
         width: 90%;
-        font-size: 1.2em;
     }
 
     .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-email > .email {

@@ -54,8 +54,6 @@
                         <a>Help Center</a>
                         <a>Terms of Use</a>
                         <a> Privacy</a>
-                    </div>
-                    <div class="navs">
                         <a>Cookie Preferences</a>
                         <a>Corporate Information</a>
                     </div>

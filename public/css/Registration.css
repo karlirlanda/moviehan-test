@@ -194,6 +194,7 @@ body {
 
 .bottom-wrapper {
     height: 20%;
+    font-size: .88em;
 }
 
 .bottom-div {
@@ -208,20 +209,24 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 70px;
+    padding-left: 50px;
     padding-top: 55px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .bottom-wrapper > .bottom-div > .navs {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: start;
     align-items: center;
     height: 25%;
+    width: 50%;
     color: white;
     font-family: 'Roboto Flex', sans-serif;
     padding-left: 20px;
 }
 
 .bottom-wrapper > .bottom-div > .navs > a {
-    padding: 0px 50px;
+    padding: 0px 30px;
 }

@@ -34,7 +34,7 @@ class NotifController extends Controller
         ];
 
         Notification::send($user, new emailnotification($details));
-
+      
         return redirect()->back();
 
 

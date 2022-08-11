@@ -30,7 +30,7 @@ body {
 }
 
 .main-body > .main-body-wrapper > .sign-in-wrapper > a > .submit {
-    background-color: rgb(146, 88, 255);
+    background-color: rgb(122, 50, 255);
     border: none;
     color: white;
     border-radius: 5px;
@@ -42,13 +42,13 @@ body {
 }
 
 .main-body > .main-body-wrapper > .sign-in-wrapper > a > .submit:hover {
-    background-color: rgb(122, 50, 255);
+    background-color: rgb(146, 88, 255);
     cursor: pointer;
 }
 
 .main-body > .main-body-wrapper > .text-wrapper {
-    padding-top: 230px;
-    height: 350px;
+    padding-top: 130px;
+    height: 400px;
     width: 40%;
     margin: auto;
     align-items: center;
@@ -67,29 +67,39 @@ body {
     font-size: 25px;
 }
 
-.main-body > .main-body-wrapper > .text-wrapper > .text2 > a {
+.main-body > .main-body-wrapper > .text-wrapper > a > button {
     padding-left: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(122, 50, 255);
+    border: 1px solid rgb(122, 50, 255);
 }
 
-.main-body > .main-body-wrapper > .text-wrapper > .text2 > a:hover {
-    text-decoration: underline;
+.main-body > .main-body-wrapper > .text-wrapper > a > button:hover {
+    background-color: rgb(146, 88, 255);
+    cursor: pointer;
 }
 
 .bottom-text-wrapper {
     width: 100%;
-    height: 257px;
+    height: 307px;
     background-color: white;
     border-top: solid 8px rgb(107, 107, 107);
     color: white;
     background-color: black;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .bottom-text-wrapper > .bottom-text {
-    width: 20%;
+    width: 30%;
     height: 70%;
-    margin: 60px 195px 17px 450px;
     margin-top: 60px;
     font-family: 'Roboto Flex', sans-serif;
     font-size: 1.2em;
@@ -104,20 +114,21 @@ body {
 .bottom-text-wrapper > .bottom-video {
     width: 30%;
     height: 99%;
-    margin: 2px 20px 0px 0px;
+    margin: 2px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-text-wrapper > .bottom-video > .video-loop {
     height: 250px;
     width: 425px;
-    background: url('../pic/Landingpage/tv.png') transparent;
     background-size: cover;
     position: relative;
 }
 
 .bottom-text-wrapper > .bottom-video > .video-loop > video {
     height: 217px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
+    border: 10px rgb(56, 56, 56) solid;
+    border-radius: 3px;
 }

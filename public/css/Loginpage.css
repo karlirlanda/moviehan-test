@@ -138,12 +138,14 @@ body {
     font-family: 'Roboto Flex', sans-serif;
     padding-top: 15%;
     display: flex;
+    font-size: 13px;
 }
 
 .new-in-moviehan > a {
     text-decoration: none;
     padding-left: 5px;
     color: inherit;
+    font-size: 13px;
 }
 
 .new-in-moviehan > .sign-up-now:hover {
@@ -173,24 +175,29 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 70px;
+    padding-left: 50px;
     padding-top: 55px;
+    font-size: .92em;
+    font-weight: bold;
 }
 
 .bottom-wrapper > .bottom-div > .navs {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: start;
     align-items: center;
     height: 25%;
+    width: 50%;
     color: white;
     font-family: 'Roboto Flex', sans-serif;
     padding-left: 20px;
+    font-size: .85em;
 }
 
 .bottom-wrapper > .bottom-div > .navs > a {
-    padding: 0px 50px;
+    padding: 0px 30px;
 }
-.mb-4
-{
+
+.mb-4 {
     margin-top: 25px;
 }
