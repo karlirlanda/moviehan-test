@@ -20,7 +20,7 @@
                 <div class="text-wrapper">
                     <p class="text"><b>Test</b></p>
                     <p class="text2">Wew !</p>
-                    <p class="text2">Ready to watch?</p>
+                    <p class="text2">Ready?</p>
                     <a href="{{route('register')}}"><button>Sign Up Here!</button></a></p>
                 </div>
                 <div class="bottom-text-wrapper">
