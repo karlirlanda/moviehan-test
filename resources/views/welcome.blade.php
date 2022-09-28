@@ -19,7 +19,7 @@
                 </div>
                 <div class="text-wrapper">
                     <p class="text"><b>Test</b></p>
-                    <p class="text2">Watch anywhere you are. We got you !</p>
+                    <p class="text2">Wew !</p>
                     <p class="text2">Ready to watch?</p>
                     <a href="{{route('register')}}"><button>Sign Up Here!</button></a></p>
                 </div>
