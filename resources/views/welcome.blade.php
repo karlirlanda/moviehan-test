@@ -18,9 +18,15 @@
                     <a href="{{route('login')}}"><input class="submit" type="submit" value="Login"></a>
                 </div>
                 <div class="text-wrapper">
+<<<<<<< HEAD
                     <p class="text"><b>Test pull notif</b></p>
                     <p class="text2">Watch anywhere you are. We got you !</p>
                     <p class="text2">Ready to watch?</p>
+=======
+                    <p class="text"><b>Test</b></p>
+                    <p class="text2">Wew !</p>
+                    <p class="text2">Ready?</p>
+>>>>>>> 0b60c12aa02c230cdf236fa7383efa9ee0be9ea4
                     <a href="{{route('register')}}"><button>Sign Up Here!</button></a></p>
                 </div>
                 <div class="bottom-text-wrapper">
