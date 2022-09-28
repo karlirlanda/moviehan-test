@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NotifController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Authenticate;
+use App\Http\Controllers\AdminUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,13 +26,47 @@ Route::prefix('user')->middleware(['auth','verified','user'])->group(function()
     Route::get('/dashboard', function (){
         return view('/user/dashboard');
     })->name('dashboard');
+
+    Route::get('/account-settings', function (){
+        return view('/user/account-settings');
+    })->name('user-settings');
+
+    Route::get('/video-player', function (){
+        return view('/user/video-player');
+    })->name('video-player');
+
 });
 
 Route::prefix('admin')->middleware(['auth','verified','admin'])->group(function()
 {
-    Route::get('/dashboard', function (){
-        return view('/admin/dashboard');
-    })->name('admin');
+    Route::get('/account-settings', function (){
+        return view('/admin/account-settings');
+    })->name('account-settings');
+
+    Route::get('/movie-control', function (){
+        return view('/admin/movie-control');
+    })->name('movie-control');
+
+    Route::get('/stream-control', function (){
+        return view('/admin/stream-control');
+    })->name('stream-control');
+
+    Route::get('/user-control', function (){
+        return view('/admin/user-control');
+    })->name('user-control');
 });
 
+Route::get('send', [NotifController::class,"sendnotification"]);
+
+// Route::post('/change-password', [UserController::class,'changePassword'])->middleware('auth:sanctum')->name('change-password');
+// Route::get('/change-password/{id}/edit', [UserController::class,'edit'])->middleware('auth:sanctum')->name('user-edit');
+
+Route::get('/change-password,', [App\Http\Controllers\AdminUserController::class, 'changePassword'])->name('change-password');
+Route::post('/change-password,', [AdminUserController::class, 'updatePassword'])->name('update-password');
+
+
+Route::get('/user-change-password', [AdminUserController::class, 'userchangePassword'])->name('userchange-Password');
+Route::post('/user-change-password', [AdminUserController::class, 'userupdatePassword'])->name('userupdate-Password');
+
 require __DIR__.'/auth.php';
+

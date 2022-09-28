@@ -15,54 +15,75 @@ class UserController extends Controller
      * @param Request $request
      * @param User $user
      */
-    public function changePassword(Request $request, User $user)
-    {
-        try
-        {
-            $validateUser = Validator::make($request->all(),
-            [
-                'password' => 'required',
-                'old_password' => 'required',
-                'confirm_password' => 'required|same:password'
-            ]);
+
+    // public function edit(User $user)
+    // {
+    //     $users = User::find(1);
+
+
+    //    // return $user;
+    //      return view('admin.account-settings', compact('users'));
+    // }
+
+    // public function changePassword($id, Request $request)
+    // {
+    //     $request->validate([
+    //         'old_password' => Auth::user()->password,
+    //         'password' => 'required|min:8',
+    //         'confirm_password' => 'required|same:password'
+    //     ]);
+
+    //     $users = User::findOrFail($id);
+
+    //     $users->update($request->all());
+
+    //     return redirect()->route('account-settings')->with('message', 'Password updated!');
+    //     try
+    //     {
+    //         $validateUser = Validator::make($request->all(),
+    //         [
+    //             'password' => 'required',
+    //             'old_password' => 'required',
+    //             'confirm_password' => 'required|same:password'
+    //         ]);
     
-            if($validateUser->fails())
-            {
-                return response()->json([
-                'status' => 'false',
-                'message' => 'Validation Error',
-                'error' => $validateUser->errors()
-                ], 401);
-            }
+    //         if($validateUser->fails())
+    //         {
+    //             return response()->json([
+    //             'status' => 'false',
+    //             'message' => 'Validation Error',
+    //             'error' => $validateUser->errors()
+    //             ], 401);
+    //         }
             
-            $user=$request->user();
-            if(Hash::check($request->old_password,$user->password))
-            {
-                $user->update([
-                    'password' => Hash::make($request->password)
-                ]);
+    //         $user=$request->user();
+    //         if(Hash::check($request->old_password,$user->password))
+    //         {
+    //             $user->update([
+    //                 'password' => Hash::make($request->password)
+    //             ]);
 
-                return response()->json([
-                    'status' => 'true',
-                    'message' => 'Password updated'
-                    ], 200);
-            }
+    //             return response()->json([
+    //                 'status' => 'true',
+    //                 'message' => 'Password updated'
+    //                 ], 200);
+    //         }
 
-            return response()->json([
-                'status' => 'true',
-                'message' => 'Old password does not match'
-                ], 400);
+    //         return response()->json([
+    //             'status' => 'true',
+    //             'message' => 'Old password does not match'
+    //             ], 400);
     
-        }
-        catch (\Throwable $th)
-        {
-            return response()->json([
-                'status' => 'false',
-                'message' => $th->getMessage(),
-                'error' => $validateUser->errors()
-                 ], 500);
-        }
-    }
+    //     }
+    //     catch (\Throwable $th)
+    //     {
+    //         return response()->json([
+    //             'status' => 'false',
+    //             'message' => $th->getMessage(),
+    //             'error' => $validateUser->errors()
+    //              ], 500);
+    //     }
+    // }
     /**
      * Display a listing of the resource.
      *

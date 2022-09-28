@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('video_url');
             $table->string('duration');
-            $table->json('cast');
+            $table->string('cast');
             $table->boolean('is_active');
             $table->string('year_released');
             $table->timestamps();

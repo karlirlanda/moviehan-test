@@ -25,10 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Copy .env file
-        run: |
-          cp .env.example .env
-
       - name: Directory Permissions
         run: |
           chmod -R 777 ./
@@ -54,7 +50,6 @@ jobs:
           docker build -t moviehan-app .
           docker tag moviehan-app:latest $ECR_REGISTRY/moviehan-app:$IMAGE_TAG
           docker push $ECR_REGISTRY/moviehan-app:$IMAGE_TAG
-
       - name: Build nginx
         id: build-nginx-image
         env:
@@ -65,11 +60,9 @@ jobs:
           docker build . -f Dockerfile_Nginx -t moviehan-nginx
           docker tag moviehan-nginx:latest $ECR_REGISTRY/moviehan-nginx:$IMAGE_TAG
           docker push $ECR_REGISTRY/moviehan-nginx:$IMAGE_TAG
-
       - name: Download task definition
         run: |
           aws ecs describe-task-definition --task-definition moviehan-TD --query taskDefinition > task-definition.json    
-
       - name: Fill in the new app image ID in the Amazon ECS task definition
         id: app-task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1

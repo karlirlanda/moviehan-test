@@ -31,14 +31,9 @@
                         <div class="input-password">
                             <input class="password" type="password" for="password_confirmation" :value="__('Confirm Password')" name="password_confirmation" id="password_confirmation" placeholder="Retype-Password">
                         </div>
-                        <div class="human">
-                            <a class="are-you">Are you human?</a>
-                        </div>
                         <div class="security-box">
-                            <input class="check" type="checkbox">
-                            <a class="not-robot">I'm not a robot</a>
-                            <i class="fa-solid fa-arrows-spin"></i>
-                            <p class="recaptcha">reCAPTCHA</p>
+                            <!-- Validation Errors -->
+                            <x-auth-validation-errors class="mb-4" style="color: red;" :errors="$errors" />
                         </div>
                         <div class="input-sign-in">
                             <input class="sign-in" type="submit" value="Register">
@@ -59,8 +54,6 @@
                         <a>Help Center</a>
                         <a>Terms of Use</a>
                         <a> Privacy</a>
-                    </div>
-                    <div class="navs">
                         <a>Cookie Preferences</a>
                         <a>Corporate Information</a>
                     </div>

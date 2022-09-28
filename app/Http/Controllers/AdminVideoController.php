@@ -2,39 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Genres;
-use App\Models\Videos;
+use App\Models\Genre;
+use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class AdminVideoController extends Controller
 {
+
     public function __construct()
     {
-        $this->video = new Videos();
+        $this->video = new Video();
     }
 
     public function index(Request $request)
     {
-
         $limit = ($request->limit) ? $request->limit : 50;
-
-        $videos = Videos::visibleFor(request()->user())->latest()->paginate($limit)->withQueryString();
+        $videos = Video::visibleFor(request()->user())->latest()->paginate($limit)->withQueryString();
 
         return view('videos.index', compact('videos'));
     }
 
     public function create()
     {
-        $videos = Videos::all();
-        $genres = Genres::all();
-
+        $videos = new Video();
+        $genres = Genre::all();
         return view('admin.admin', compact('videos', 'genres'));
     }
 
     public function store(Request $request)
     {
-
         //for validation
         $request->validate([
             'thumbnail' => 'required|file',
@@ -47,12 +45,8 @@ class AdminVideoController extends Controller
             'is_active' => 'required|boolean',
             'year_released' => 'required|string|max:255',
         ]);
-
-        // print_r($request->all());
-        // die;
-
         //creating a new video
-        $video = new Videos();
+        $video = new Video();
 
         $video->category_id = $request->category_id;
         $video->title = $request->title;
@@ -68,21 +62,20 @@ class AdminVideoController extends Controller
 
             $path = $request->file('thumbnail')->store('thumbnail', ['disk' => 's3']);
             $video->thumbnail = $path;
-            // print_r(Storage::disk('s3')->url($path));
-            // die;
         }
 
         $video->save();
 
+        //relationship
         $video->genres()->attach($request->input('genres', []));
         $video->tags()->attach($request->input('tags', []));;
 
-        return $video;
+        return response()->json(["Success" => " Video uploaded"]);
     }
 
     public function show($id)
     {
-        $videos = Videos::find($id);
+        $videos = Video::find($id);
 
         if ($videos) {
             return $videos;
@@ -94,33 +87,19 @@ class AdminVideoController extends Controller
 
     public function all()
     {
-        $videos = Videos::all();
+        $videos = Video::all();
 
         return $videos;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function edit()
+    {
 
-    // public function edit()
-    // {
+        $videos = Video::orderBy('name')->pluck('name', 'id')->prepend('All Videos', '');
 
-    //     $videos = Auth::user()->videos()->orderBy('name')->pluck('name', 'id')->prepend('All Videos', '');
+        return $videos;
+    }
 
-    //     return $videos;
-    // }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update($id, Request $request)
     {
         $request->validate([
@@ -135,7 +114,7 @@ class AdminVideoController extends Controller
             'year_released' => 'string|max:255',
         ]);
 
-        $video = Videos::findOrFail($id);
+        $video = Video::findOrFail($id);
 
         if ($request->hasFile('thumbnail')) {
 
@@ -158,15 +137,9 @@ class AdminVideoController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        $video = Videos::findOrFail($id);
+        $video = Video::findOrFail($id);
         $path = $video->thumbnail;
 
         $deleted = Storage::disk('s3')->delete($path);
@@ -178,5 +151,15 @@ class AdminVideoController extends Controller
                 'message' => 'Video Successfully Deleted'
             ]);
         }
+    }
+
+
+    public function changeStatus(Request $request)
+    {
+        $video = Video::find($request->id);
+        $video->is_active = $request->is_active;
+        $video->save();
+
+        return response()->json(['success' => 'Status changed.']);
     }
 }

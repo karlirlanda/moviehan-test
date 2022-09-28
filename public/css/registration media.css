@@ -8,7 +8,7 @@
     }
 
     .main-bg > .main-body-wrapper > .login-content-wrapper {
-        height: 85%;
+        height: 60%;
         width: 50%;
         flex-direction: column;
     }
@@ -19,6 +19,10 @@
 
     .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-sign-in > .sign-in {
         width: 100%;
+    }
+
+    .main-bg > .bottom-wrapper {
+        background-color: black;
     }
 }
 
@@ -32,8 +36,8 @@
     }
 
     .main-bg > .main-body-wrapper > .login-content-wrapper {
-        height: 70%;
-        width: 100%;
+        height: 60%;
+        width: 90%;
         flex-direction: column;
     }
 
@@ -53,6 +57,16 @@
     .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-sign-in > .sign-in {
         width: 82.5%;
         font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .input-sign-in {
+        margin-left: 45px;
+    }
+
+    .main-bg > .main-body-wrapper > .login-content-wrapper > .login-content > .already-have {
+        margin-left: 45px;
     }
 }
 

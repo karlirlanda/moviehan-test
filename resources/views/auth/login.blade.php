@@ -12,8 +12,6 @@
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
         <form method="POST" action="{{route('login')}}" class="main-bg">
             @csrf
         <div class="main-bg">
@@ -37,6 +35,8 @@
                             <input class="check-box" type="checkbox" value="true" checked>
                             <span class="remember-me">Remember me</span>
                             <a class="need-help" href="{{route('password.request')}}">Forgot my password</a>
+                            <!-- Validation Errors -->
+                            <x-auth-validation-errors class="mb-4" style="color: red;" :errors="$errors" />
                         </div>
                         <div class="new-in-moviehan">
                             <p class="new-in">New in Movie-Han?</p><a class="sign-up-now" href="{{route('register')}}"><b>Register</b></a><a>now</a>
@@ -55,8 +55,6 @@
                         <a>Help Center</a>
                         <a>Terms of Use</a>
                         <a>Privacy</a>
-                    </div>
-                    <div class="navs">
                         <a>Cookie Preferences</a>
                         <a>Corporate Information</a>
                     </div>

@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:wght@900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{URL::asset('/css/Landingpage.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('/css/landingpage media.css')}}">
     </head>
     <body>
         <div class="main-body">
@@ -19,7 +20,8 @@
                 <div class="text-wrapper">
                     <p class="text"><b>Test</b></p>
                     <p class="text2">Watch anywhere you are. We got you !</p>
-                    <p class="text2">Ready to watch? Sign up now! Click<a href="{{route('register')}}"><b>HERE</b></a></p>
+                    <p class="text2">Ready to watch?</p>
+                    <a href="{{route('register')}}"><button>Sign Up Here!</button></a></p>
                 </div>
                 <div class="bottom-text-wrapper">
                     <div class="bottom-text">

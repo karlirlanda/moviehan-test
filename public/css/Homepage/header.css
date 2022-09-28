@@ -13,6 +13,22 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(58, 58, 58);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(124, 120, 120);
+    border-radius: 10px;
+}
+
+
+
 h1, h2, h3, h4 {
     color: white;
 }
@@ -47,7 +63,7 @@ img {
 }
 
 .header-container > .header-wrapper > .header-logo-wrapper {
-    width: 3fr;
+    width: 18%;
     height: 100%;
     margin-left: 3em;
     display: grid;
@@ -55,7 +71,7 @@ img {
     justify-content: start;
 }
 
-.header-container > .header-wrapper > .header-logo-wrapper > img {
+.header-container > .header-wrapper > .header-logo-wrapper > a > img {
     width: 110px;
     height: 50%;
 }
@@ -68,12 +84,13 @@ img {
 
 .header-container > .header-wrapper > .header-search-wrapper > input {
     border: none;
-    padding: 0.4rem 1.3rem;
+    padding: 0.4rem 2rem;
     outline-color: rgb(0, 113, 158);
     border-radius: 8px 0px 0px 8px;
     outline-width: 0px;
     background-color: rgb(85, 84, 84);
     color: white;
+    width: 300px;
 }
 
 .header-container > .header-wrapper > .header-search-wrapper > input:focus {
@@ -105,12 +122,6 @@ img {
     flex-flow: row;
 }
 
-.header-container > .header-wrapper > .header-profile-wrapper > .fa-sort-down {
-    margin-bottom: 8px;
-    margin-left: 10px;
-    
-}
-
 .header-container > .header-wrapper > .header-profile-wrapper > .fa-solid {
     margin-right: 1em;
     color: white;
@@ -122,16 +133,77 @@ img {
     color: rgb(130, 97, 221);
 }
 
-.header-container > .header-wrapper > .header-profile-wrapper > .select-logo {
+.dropbtn { 
+    background-color: transparent;
+    background-image: url("alzon.jpg");
     background-size: cover;
-    height: 3.2em;
-    width: 3.2em;
-    border-radius: 50px;
+    color: transparent;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
     cursor: pointer;
-    margin-right: 10px;
-    -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 1px;
-        text-overflow: '';
-    
+}
+  
+.dropdown {
+    display: flex;
+    justify-content: end;
+}
+  
+  
+
+.dropdown > button {
+    position: relative;
+    display: inline-block;
+    background-size: cover;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-right: 20px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 50px;
+    margin-top: 20px;
+    margin-right: 5px;
+    height: 114px;
+}
+
+.dropdown-content > .desc:hover {
+    background:rgb(130, 97, 221);
+}
+
+.dropdown-content > .desc > .desc-form {
+    height: 38px;
+}
+
+.dropdown-content > .desc > .desc-form > button {
+    padding: 5px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: transparent
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }
