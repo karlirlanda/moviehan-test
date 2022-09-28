@@ -17,7 +17,7 @@
                     <a href="{{route('login')}}"><input class="submit" type="submit" value="Login"></a>
                 </div>
                 <div class="text-wrapper">
-                    <p class="text"><b>Get your popcorn and watch unlimited movie and more.</b></p>
+                    <p class="text"><b>Test</b></p>
                     <p class="text2">Watch anywhere you are. We got you !</p>
                     <p class="text2">Ready to watch? Sign up now! Click<a href="{{route('register')}}"><b>HERE</b></a></p>
                 </div>
